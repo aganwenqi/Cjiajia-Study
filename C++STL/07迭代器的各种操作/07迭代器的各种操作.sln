@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07迭代器的各种操作", "07迭代器的各种操作\07迭代器的各种操作.vcxproj", "{8ABC43CC-482F-4290-89D2-38A9D3FD5690}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8ABC43CC-482F-4290-89D2-38A9D3FD5690}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8ABC43CC-482F-4290-89D2-38A9D3FD5690}.Debug|Win32.Build.0 = Debug|Win32
+		{8ABC43CC-482F-4290-89D2-38A9D3FD5690}.Release|Win32.ActiveCfg = Release|Win32
+		{8ABC43CC-482F-4290-89D2-38A9D3FD5690}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

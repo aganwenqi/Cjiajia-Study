@@ -1,0 +1,41 @@
+﻿生成启动时间为 2017/9/15/周五 21:54:19。
+     1>项目“E:\C++STL\20transform\20transform\20transform.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         H:\VS2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "源.cpp"
+         源.cpp
+     1>h:\vs2012\vc\include\algorithm(990): error C2198: “bool (__cdecl *)(int &,int &)”: 用于调用的参数太少
+                 h:\vs2012\vc\include\algorithm(1016): 参见对正在编译的函数 模板 实例化“_OutIt std::_Transform<_InIt,_OutIt,bool(__cdecl *)(int &,int &)>(_InIt,_InIt,_OutIt,_Fn1)”的引用
+                 with
+                 [
+                     _OutIt=std::_List_iterator<std::_List_val<std::_List_simple_types<int>>>,
+                     _InIt=int *,
+                     _Fn1=bool (__cdecl *)(int &,int &)
+                 ]
+                 h:\vs2012\vc\include\algorithm(1040): 参见对正在编译的函数 模板 实例化“_OutIt std::_Transform1<_InIt,_OutIt,bool(__cdecl *)(int &,int &)>(_InIt,_InIt,_OutIt,_Fn1,std::input_iterator_tag,std::output_iterator_tag)”的引用
+                 with
+                 [
+                     _OutIt=std::_List_iterator<std::_List_val<std::_List_simple_types<int>>>,
+                     _InIt=int *,
+                     _Fn1=bool (__cdecl *)(int &,int &)
+                 ]
+                 h:\vs2012\vc\include\algorithm(1066): 参见对正在编译的函数 模板 实例化“_OutIt std::_Transform1<int*,_OutIt,bool(__cdecl *)(int &,int &)>(_InIt,_InIt,_OutIt,_Fn1,std::true_type)”的引用
+                 with
+                 [
+                     _OutIt=std::_List_iterator<std::_List_val<std::_List_simple_types<int>>>,
+                     _InIt=int *,
+                     _Fn1=bool (__cdecl *)(int &,int &)
+                 ]
+                 e:\c++stl\20transform\20transform\源.cpp(60): 参见对正在编译的函数 模板 实例化“_OutIt std::transform<std::_Vector_iterator<_Myvec>,std::_List_iterator<_Mylist>,bool(__cdecl *)(int &,int &)>(_InIt,_InIt,_OutIt,_Fn1)”的引用
+                 with
+                 [
+                     _OutIt=std::_List_iterator<std::_List_val<std::_List_simple_types<int>>>,
+                     _Myvec=std::_Vector_val<std::_Simple_types<int>>,
+                     _Mylist=std::_List_val<std::_List_simple_types<int>>,
+                     _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<int>>>,
+                     _Fn1=bool (__cdecl *)(int &,int &)
+                 ]
+     1>已完成生成项目“E:\C++STL\20transform\20transform\20transform.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.35

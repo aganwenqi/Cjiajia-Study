@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13最大值和最小值", "13最大值和最小值\13最大值和最小值.vcxproj", "{736AFE6A-21EB-46B7-A79C-6C8E4E782EF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{736AFE6A-21EB-46B7-A79C-6C8E4E782EF6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{736AFE6A-21EB-46B7-A79C-6C8E4E782EF6}.Debug|Win32.Build.0 = Debug|Win32
+		{736AFE6A-21EB-46B7-A79C-6C8E4E782EF6}.Release|Win32.ActiveCfg = Release|Win32
+		{736AFE6A-21EB-46B7-A79C-6C8E4E782EF6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

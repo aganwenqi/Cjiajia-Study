@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "24函数模板", "24函数模板\24函数模板.vcxproj", "{E8547A3C-5D8F-4520-8AE3-BDD5EDFB5B04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8547A3C-5D8F-4520-8AE3-BDD5EDFB5B04}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8547A3C-5D8F-4520-8AE3-BDD5EDFB5B04}.Debug|Win32.Build.0 = Debug|Win32
+		{E8547A3C-5D8F-4520-8AE3-BDD5EDFB5B04}.Release|Win32.ActiveCfg = Release|Win32
+		{E8547A3C-5D8F-4520-8AE3-BDD5EDFB5B04}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

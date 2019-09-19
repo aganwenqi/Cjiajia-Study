@@ -1,0 +1,12 @@
+﻿生成启动时间为 2017/9/13/周三 21:14:02。
+     1>项目“E:\C++STL\11for_each\11for_each\11for_each.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         H:\VS2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "源.cpp"
+         源.cpp
+     1>e:\c++stl\11for_each\11for_each\源.cpp(75): error C2040: “as”:“double”与“MeanValue &”的间接寻址级别不同
+     1>e:\c++stl\11for_each\11for_each\源.cpp(76): error C2088: “<<”: 对于 class 非法
+     1>已完成生成项目“E:\C++STL\11for_each\11for_each\11for_each.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.38
