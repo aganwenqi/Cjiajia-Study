@@ -1,0 +1,2 @@
+bgSprite2->setFlippedX(true);//水平翻转
+bgSprite2->setFlippedY(true);//垂直翻转

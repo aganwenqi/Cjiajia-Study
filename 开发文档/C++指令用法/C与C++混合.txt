@@ -1,0 +1,6 @@
+
+c.c
+C++.cpp
+
+如果cpp想调用c.c里的内容那么，（c调用cpp也是如此）：
+   extern "C" 函数原型

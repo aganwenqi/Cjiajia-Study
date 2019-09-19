@@ -1,0 +1,71 @@
+#include "json\writer.h"
+chang10.7
+
+#include "json\reader.h"
+#include "json\value.h"
+	Json::Reader reader;//这个类用来解析JSON文件
+
+	Json::Value root;//表示JSON的一段数据
+
+	//加载文件
+
+	std::string data=FileUtils::getInstance()->getStringFromFile("test1.json");
+
+	if(reader.parse(data,root,false)==true)//parse解析函数开始解析，解析data，解析结果会保留在root对象中，
+		
+           //所有的数据都可以通过root来获取
+	
+{
+		log("id=%d",root["id"].asInt());//获取该数据
+	
+	log("name=%s",root["name"].asCString());
+	
+	log("IQ=%f",root["IQ"].asDouble());
+	
+}
+
+数组的形式
+{
+		int num=root.size();
+		for(int i=0;i<num;i++)
+		{
+			log("id=%d",root[i]["id"].asInt());
+			log("model=%s",root[i]["model"].asCString());
+			log("atk=%d",root[i]["atk"].asInt());
+		}
+	}
+创建json文件
+
+	Json::Value root;//表示JSON的一段数据
+	Json::FastWriter writer;//转换root数据用的
+	root["name"]="who";
+	root["IQ"]=99;
+	std::string json=writer.write(root);//转换为字符串
+	FILE*file=fopen("test3.json","w");//创建文件
+	fprintf(file,json.c_str());//写进数据
+	fclose(file);//保存
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

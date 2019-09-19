@@ -1,0 +1,17 @@
+
+new 堆的定义
+delete 删除内存空间
+this 该指针保存当前对象地址
+explicit 禁止强制转换，声明后该表达式就是显示转换，调用时只能通过规定调用，比如class a{ public: explicit a(int s);}
+创建a对象时不能：a sh=5;只能a sh(5);
+
+operator 运算符重载
+
+ctrl+H为替换指令
+
+protected    该函数表示它的成员受保护，只有他的子类可以访问，其他不能访问
+
+virtual   虚函数，如果声明的函数如：virtual void swap()=0;，那么它是纯虚函数，起到接口作用
+#define num 10    宏定义，#define num(ss) ss create();//宏函数，具体百度 
+gets(a)   表示输入字符串，且可以输入空格
+cin.get(a,12)  表示限定输入字符串长度，a代表数组，12代表限定的长度

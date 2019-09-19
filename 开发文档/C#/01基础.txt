@@ -1,0 +1,35 @@
+DataTime 时间
+
+
+Console.Write("sdfsdf{0}哈撒给\n",ab);输出
+
+   Char.IsLetter(a)判断a是否为字母
+        IsLetterOrDigit(a)判断a是否为字母或数字
+	IsLower(a)是否为小写
+	IsUpper(a)是否为大写
+	IsPunctuation(a)是否为标点符号
+	IsSymbol(a)是否为符号
+	IsSepaarator(a)是否为分隔符
+	IsWhiteSpace(a)是否为空白
+连接字符串
+  string.Join(str1,str2)
+分割字符串
+  str.Split(new Char[]{','});返回数组
+  str.Split(new Char[]{',','.'});
+  str.Split(new Char[]{',','.'},2);排除出现两个的地方
+  str.Split(new Char[]{',','.'},StringSplitOptions.RemoveEmptyEntries);合并同样的	
+替换
+ str.Repace(被替换的,要替换的)
+格式化字符
+ str.Format("{0},{1}！！",1,2) 输出 1,2！！
+
+StringBuilder类
+ sb.AppendLine("dsf")打印字符串并添加到sb里
+ Insert(1,"")在第一个字符串后插入数据
+
+ 类型转换
+ Convert.ToDouble(数据)
+ 类型,Parse(数据)
+ 类型.ToString()	
+  循环
+   foreach(int a in s)

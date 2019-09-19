@@ -1,0 +1,2 @@
+JDialog类，该类是派生子窗口，（具体看帮助文档）相当于一个字的Frame
+this.dispose();关闭当前窗口

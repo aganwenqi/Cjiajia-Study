@@ -1,0 +1,17 @@
+import java.lang.Throwable
+try{
+}catch(abcd a)
+这是一个异常，大括号里面表示可能发生异常的地方，abcd是引发异常的类型
+finally不管有没异常都会调用这个语句
+其中：
+ArithmeticException(这个是算术异常类)
+ArrayIndexOutOfBoundException(数组越界类)
+IllegalArgumentException(非法参数类)
+EmptyStackException(栈空类)
+SecurityException(安全冲突类)
+InterruptedException(延时抛出异常类)
+EOFException(读写文件的结尾抛出)
+FileNotFoundException();文件不存在异常
+import java.io.IOException;输入输出异常类
+ClassNotFoundException找不到该类的异常
+InterruptedException线程延时函数抛出的异常类型

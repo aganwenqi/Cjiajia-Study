@@ -1,0 +1,9 @@
+      <智能指针>·······················
+auto_ptr<double> pd(new double);定义一个智能指针
+
+Boost开源智能指针库
+
+      <名称空间>·······················
+using std::cout;  导入cout
+
+using bs=cout; 给定义别名

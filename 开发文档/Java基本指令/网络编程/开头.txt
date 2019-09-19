@@ -1,0 +1,7 @@
+ServerSocket ss=new ServerSocket(1234);//设置项目端口
+Socket s=ss.accept();如果有服务端链接那么这里成立，否则卡在这里
+
+Socket s=new Socket("127.0.0.1",1234);//链接服务器
+
+InputStreamReader isr=new InputStreamReader(s.getInputStream());//获取客服发送的消息
+PrintWriter pw=new PrintWriter(s.getOutputStream(),true);//给客服发送字符串

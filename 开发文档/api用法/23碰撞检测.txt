@@ -1,0 +1,26 @@
+
+void Entity::SetSprite(Sprite*sprite)
+{
+	this->m_sprite=sprite;
+	this->addChild(m_sprite);
+	Size size=m_sprite->getContentSize();//获取矩形
+	 size.setSize(size.width-size.width/2,size.height-size.height/2);//设置矩形大小
+	 m_sprite->setPosition(Point(size.width/2,size.height/2));
+	this->setContentSize(size);
+	
+}
+bool Monster::isCollideWithPlayer(Player*player)
+{
+	//获取碰撞对象的boundBox,也就是矩形
+	Rect entityRect=player->getBoundingBox();
+//	Point monsterpos=getPosition();
+	Rect monsterRect=getBoundingBox();
+	//monsterpos.setPointxy(-20,0);//设置坐标，在基础上设置
+	//判断是否有交际
+return	entityRect.intersectsRect(monsterRect);//矩形碰撞
+	//return entityRect.containsPoint(monsterpos);
+}
+
+
+
+

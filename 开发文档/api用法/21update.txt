@@ -1,0 +1,2 @@
+virtual void update();//时间表更新函数
+this->scheduleUpdate();//开启时间表更新函数

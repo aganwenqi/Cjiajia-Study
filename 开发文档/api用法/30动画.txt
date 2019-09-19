@@ -1,0 +1,31 @@
+SpriteFrame可以剪切纹理的精灵函数
+Animation创建动画对象
+Animate包装动画对象
+
+                                     
+//使用spriteFrame列表对象创建动画对象
+	
+Animation*animation=Animation::createWithSpriteFrames(frameVec);
+frameVec里面装的都是SpriteFrame帧对象的容器
+
+	animation->setLoops(-1);//设置播放次数，-1表示无限循环
+	
+animation->setDelayPerUnit(0.1f);//设置播放间隔时间
+
+	
+//将动画包装成一个动作
+	
+Animate*action=Animate::create(animation);
+
+//将精灵缓冲区的图片添加到容器
+		
+	frame=frameCache->getSpriteFrameByName(StringUtils::format("run%d.png",i));
+animation->setRestoreOriginalFrame(true);//动画播放完返回第一帧
+
+
+
+                                          
+
+
+
+

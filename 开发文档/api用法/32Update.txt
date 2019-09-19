@@ -1,0 +1,16 @@
+ this->schedule(schedule_selector(HelloWorld::myUpdate));自定义的updae函数用法
+ this->schedule(schedule_selector(HelloWorld::myUpdate),2.0f);//这里表示每两秒调用一次Update
+this->scheduleOnce();仅仅执行一次
+
+schedule_selector定时器回调函数，不带参数
+callfunc_selector动作回调函数，不带参数
+callfunc_selectorN动作回调函数，带一个Node类型的参数
+callfunc_selectorND动作回调函数，带一个Node类型的参数和一个任何类型的参数
+
+this->unscheduleUpdate();//取消默认的upate
+this->unschedule(schedule_selector(HelloWorld::myUpdate));//取消自定义的
+this->unscheduleAllSelectors()停止所有的update
+
+   Director::getInstance()->getScheduler()->schedule(
+        schedule_selector(SocketDataManager::update),
+        this, 0.108f, false);//没有继承cocos任何相关类可以这样开启线程

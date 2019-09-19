@@ -1,0 +1,40 @@
+int main  开机开头运行指令
+innanip   小数点精度函数库（setprecision）
+iomanip   setw
+
+
+using namespace std; 命令空间
+float   小数点指令
+show   跳转指令
+void  无返回值
+int  定义（有返回值）
+swap 交换定义指令
+true  真正的
+false  虚实的
+bool  区别是1还是0
+check  定义一个空间内存（比如：定义一个开关，1为开，0关2个字节的内存空间）
+if  判断指令
+char ch    字符指令（一个内存空间） char  字符型
+sizeof  测试指令占多数内存空间
+unsigned  无符号定义
+const   常量设定
+enum num   累增常量（如果第一个为1，那么第二个他会为2）,17课有
+class human类声明
+public 后面的成员谁都可以用（公用成员）
+private 后面定义的别的成员不可访问（私用成员）
+void human：：... 该函数功能
+inline int ...内联函数
+int ...
+const   常量定义（该语句不可修改值）
+构造函数函数定义跟类的定义名相同
+析构函数则是清除构造函数用的，而且它不能有参数，它的作用是程序运行完后他将清除构造函数内存
+它的格式就是构造函数前面加~
+goto  无条件跳转指令
+while（条件）循环指令
+switch（变量） 在它里面的case有它的变量那里开始执行
+否则该指令default执行  
+ &&与指令
+||或指令
+！非指令
+& 取地址符指令
+* 定义一个指针

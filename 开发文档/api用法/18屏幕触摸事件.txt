@@ -1,0 +1,56 @@
+
+    auto listener = EventListenerTouchOneByOne::create();//创建监听事件
+  
+  listener->setSwallowTouches(true);//吞噬功能 
+setTouchEnabled(true)//启动触摸事件
+ listener->onTouchBegan = [](Touch* touch, Event* event){
+     
+
+   /* 注册监听事件的时候不是绑定了一个Node对象么？在这里就可以取出这个对象 */
+      
+  auto target = static_cast<Sprite*>(event->getCurrentTarget());
+
+     
+   
+  Point pos = Director::getInstance()->convertToGL(touch->getLocationInView());//获得单击坐标
+
+      
+  /* 判断点击的坐标是否在精灵的范围内 */
+     
+ 
+  if (target->getBoundingBox().containsPoint(pos))
+     
+   {
+            /* 设置精8灵的透明度为0 */
+        
+    target->setOpacity(0);
+
+           
+    return true;
+       
+   }
+        
+      
+  return false;
+    };
+   
+
+ listener->onTouchEnded = [](Touch* touch, Event* event){
+     
+   /* 恢复精灵的透明度 */
+       
+ auto target = static_cast<Sprite*>(event->getCurrentTarget());
+   
+    
+ target->setOpacity(255);
+    };
+  
+  
+  /* 注册监听事件，绑定精灵1 */
+   
+ _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, sp1);
+
+    /* 注册监听事件，绑定精灵2，这里要注意，listener对象拷贝了一个 */
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener->clone(), sp2);
+
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener->clone(), sp3);

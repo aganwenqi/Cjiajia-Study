@@ -1,0 +1,5 @@
+Value该类定义任何类型的值
+log("%s",参数.as类型());//调试窗口输出
+如：log("%s",gan.asString().c_str());
+
+

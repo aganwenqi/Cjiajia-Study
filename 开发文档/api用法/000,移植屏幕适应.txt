@@ -1,0 +1,2 @@
+	À­Éì·ÅÈ«ÆÁ
+	//glview->setDesignResolutionSize(800,500,ResolutionPolicy::EXACT_FIT);

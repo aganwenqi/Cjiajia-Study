@@ -1,0 +1,5 @@
+Toolkit.getDefaultToolkit().getScreenSize()//获取电脑屏幕的长和宽
+this.setUndecorated(true);禁止或者启动Frame装饰
+t=new Timer(1000,this);
+t.start();开启当前类的系统计时
+Calendar.getInstance().getTime().toLocaleString()获取当前系统时间

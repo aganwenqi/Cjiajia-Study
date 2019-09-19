@@ -1,0 +1,6 @@
+5_4
+this->addChild(sprite,1,2)//第二个为优先绘画顺序，第二个为Tag值
+auto logx=(Label*)this->getChildByTag(1)//这里指查找Label类的属于Tag值为1的那个层
+
+getID()表示最先碰的手指，第一个返回0，以此类推
+logText->setString(text);//把字符串覆盖了然来的字符串

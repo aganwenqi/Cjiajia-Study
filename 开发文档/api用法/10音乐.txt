@@ -1,0 +1,5 @@
+音乐头文件
+#include "SimpleAudioEngine.h"
+CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("恋人心 伴奏 李依.mp3",true);//长音乐
+playBackgroudMusic//播放长因音乐
+playEffect//播放短音乐

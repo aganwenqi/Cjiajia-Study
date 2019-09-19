@@ -1,0 +1,16 @@
+
+jf.getContentPane().add(jsp);
+
+JPanel con;
+con.setPreferredSize(new Dimension(w,h));设置该面板的大小
+
+GirdLayout(6,6)表示在该图层平分为6个区域，每个组件会按顺序填充满它们
+
+setHorizontalScrollBarPolicy(int policy);确定水平滚动条何时显示在窗口上
+setVerticalScrollBarPolicy(int policy);确定垂直滚动条何时显示在窗口上
+
+JFileChooser类为打开一个选择文件的窗口
+setDialogTitle("")该窗口的标题
+showOpenDialog(null);//打开文件面板
+showSaveDialog(null);保存文件面板
+JFileChooser的对象.getSelectedFile().getAbsolutePath();返回字符串（得到用户的全路径）

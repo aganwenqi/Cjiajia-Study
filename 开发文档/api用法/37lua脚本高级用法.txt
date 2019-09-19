@@ -1,0 +1,11 @@
+chang12
+lua_pushstring(pL,"name")//表示把c++中的字符串放到栈顶中
+lua_gettable(pL,-1)//表示把-1里的相关数据放到栈顶，比如name，那么他会替换name的数据，注意，它只会替换最后添加的那个,用一次替换一次
+
+lua_getglobal(pL"helloAdd");//添加函数在栈顶
+函数有两个参数，所有添加量个参数到栈顶
+lua_pushnumber(pL,10);
+lua_pushnumber(pL,5);
+//执行函数，函数的参数个数2，返回值为1个有添加在栈顶
+lua_call(pt,2,1);
+

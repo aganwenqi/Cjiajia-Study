@@ -1,0 +1,2 @@
+setsText(string)//其实这个函数里是setstring()
+setSystemFontSize(int);//设置字体大小

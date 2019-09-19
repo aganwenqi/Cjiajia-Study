@@ -1,0 +1,13 @@
+Scale9Sprite//九妹类
+Scale9Sprite*nineGirl=Scale9Sprite::create("button.png");
+//创建九妹精灵	
+nineGirl->setContentSize(Size(200,50));//九妹拉伸图
+
+ControlButton*controlbtn=ControlButton::create(label,nineGirl);//前面是标题，后面是按钮背景图
+
+//按下后的图片
+	
+controlbtn->setBackgroundSpriteForState(nineGirl1,Control::State::HIGH_LIGHTED);
+
+//controlbtn->setPreferredSize(Size(200,50));//强制按钮大小
+（chang4.1）

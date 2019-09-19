@@ -1,0 +1,84 @@
+
+
+#include "cocos2d.h"
+
+#include "editor-support/cocostudio/CCSGUIReader.h
+"
+#include "ui/CocosGUI.h"
+
+using namespace cocos2d::ui;
+
+using namespace cocostudio;
+
+
+
+//加载UI
+auto UI=cocostudio::GUIReader::getInstance()->widgetFromJsonFile("HelloUI_1.ExportJson");//widgetFromJsonFile导出UI文件，顶级类
+    //获取控件对象
+   
+Button*xiaoruoBtn=(Button*)Helper::seekWidgetByName(UI,"xiaoruoBtn");
+   
+m_xiaoruoImg=(ImageView*)Helper::seekWidgetByName(UI,"xiaoruoImg");
+  
+ 
+//添加按钮添加监听
+   
+xiaoruoBtn->addTouchEventListener(this,toucheventselector(HelloWorld::onClick));
+onClick//监听触发后执行的函数
+
+setEnabled(true)激活该控件
+setTouchEnabled(false)屏蔽该控件的触摸事件
+
+
+
+
+
+
+
+
+void HelloWorld::onClick(Ref*, TouchEventType type)
+
+{
+	switch(type)
+	
+{
+	case TouchEventType::TOUCH_EVENT_BEGAN://按下时触发
+		
+break;
+	
+case TouchEventType::TOUCH_EVENT_MOVED://按下滑动时触发
+		
+break;
+	
+case TouchEventType::TOUCH_EVENT_ENDED://按下松开时触发
+		
+if(m_xiaoruoImg->isVisible())
+		
+{
+			m_xiaoruoImg->setVisible(false);
+		}
+		else
+		
+{
+			m_xiaoruoImg->setVisible(true);
+		}
+		
+break;
+	
+case TouchEventType::TOUCH_EVENT_CANCELED://因为某些事情中断而触发
+		
+break;
+	
+default:break;
+	}
+
+
+setVisible(true)//传真就表示图片显示，flase隐藏
+（HelloUI）
+
+
+
+m_hpBar=(LoadingBar*)Helper::seekWidgetByName(UI1,"hpBar");//进度条
+	
+m_hpBar->addTouchEventListener(this,toucheventselector(HelloWorld::onClick));//进度条
+m_hpBar->setPercent(m_hpBar->getPercent()+1);//修改血条进度

@@ -1,0 +1,26 @@
+Connection ct=null;
+Statement sm=null;
+	try{
+		//固定死的，打开数据库驱动
+     	//Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+	Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+	//连接对应数据库并且登录
+	//ct=DriverManager.getConnection("jdbc:odbc:SQL SERVICES","sa","ganwenqi12");
+	ct=DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=shuihu","sa","ganwenqi12");
+	//有了这三行话java就跟数据库连接上了
+       sm=ct.createStatement();
+   ResultSet rs=sm.executeQuery("select * from renwu");
+   //获取一张表，一行一行的容器(默认第一行)
+	//括号获取第几个字段
+	int bianhao=rs.getInt(1);
+   }catch(Exception e){}
+	finally
+	{
+	try
+	{
+	  if(ct!=null)
+	  ct.close();
+	  if(sm!=null)
+	  sm.close();
+	 }catch(Exception e){}
+	     }

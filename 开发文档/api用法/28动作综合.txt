@@ -1,0 +1,34 @@
+To和By的区别就是：To在原图片的基础放大，而By是现在大小的基础放大
+Action//所有动作的父类
+setRotation(0);//设置回正面角度
+stopAllActions();//停止所有动作
+
+移动MoveTo*moveTo=MoveTo::create(2.0f,Point(650,150));//第一个参数为时间，第二个为移动至坐标
+，原始坐标计算
+移动//MoveBy*moveTo=MoveBy::create(2.0f,Point(650,150));//第一个参数问时间，第二个为坐标，从现在坐标计算
+	
+拉伸//ScaleTo*scaleTo=ScaleTo::create(2.8f,1.5f,2.0f);//第一个拉伸时间，第二个拉伸宽倍数，1.5表示多百分之50，第三个为高
+放大xiaoruo1->setScale(3.0f);//精灵放大几倍
+setScaleX为X方向放大
+
+闪射Blink*one=Blink::create(3.0f,3)3秒闪烁三下
+
+//创建弹跳动作
+	JumpBy*jumpBy=JumpBy::create(3.0f,Point(50,1),100,5);
+	
+//创建旋转动作
+	RotateBy*rotateBy=RotateBy::create(4.5f,0,360);
+//第一个360为x方向选择，第二个360为y方向,都是以对应x和y为中心	
+//创建组合动作
+,	一起播放，而Sequence是按顺序播放
+Action*actions=Spawn::create(moveBy,jumpBy,rotateBy,NULL);
+
+
+	/* 组合两个动作，放大后缩小 */
+    auto scaleLarge = ScaleTo::create(0.3f, 2.5f, 2.5f);
+    auto scaleSmall = ScaleTo::create(0.5f, 0.5f, 0.5f);
+
+ auto repeat=RepeatForever::create(rotateBy);//创建永久动作	
+
+Repeat有限次数
+reverse();动作反向

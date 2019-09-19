@@ -1,0 +1,33 @@
+import javax.swing.*
+import java.awt.*;
+improt java.awt.event.*;//菜单包
+JFrame mw=new JFrame("我是一个窗口");//创建一个窗口容器对象
+setLocation(200,200);设计窗口出现的位置
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);如果不用这行代码java程序关闭后进程不会关闭
+setIconImage("图片资源");设置窗口左上角的图标
+setIconImage(new ImageIcon("image/QQ图片20161010134738.jpg").getImage())
+
+JOptionPane.showMessageDialog(this,"中文字体");//弹出一个这个窗口
+
+this.setResizable(false);//用了这个函数以后界面的大小就不可以改变
+mw.setSize(250,250);//设置窗口的大小
+
+mw.setVisible(true);//激活
+
+implements ActionListener//要添加监听事件必须继承它，而他的接口函数是：
+void actionPerformed(ActionEvent e)
+a.setLayout(new FlowLayout());//设置居中布局
+if(e.getActionCommand().equals("red"))//判断是否是red标签的控件触发了事件
+
+//另外一种窗口
+import java.applet.*;
+
+new BorderLayout();这种布局方式是东南西北中，东East,西West,男South,北North,中Center
+GridLayout(6,6，7,7);网格布局管理器（后面的7和7是每个组件布局的间隙）
+add(buuton,"Center");//布局居中
+CardLayout();这种布局用法如下:
+JPanel jp=new JPanel();
+CardLayout mycard=new CardLayout();创建扑克牌叠在一起的布局
+jp.setLayout(mycard);//这个容器里的所有内容都会叠在一起
+mycard.first(jp);这样就会先显示jp容器里的第一个
+mycard.last(jp);这样就会先显示jp容器里的最后一个，还有等等的一系列的方法

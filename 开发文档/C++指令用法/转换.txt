@@ -1,0 +1,8 @@
+static_cast<double>（值）把括号里的值转换为double
+
+class a
+{
+  public:
+     a();
+     operator double();它会把这个类转换成double，
+}

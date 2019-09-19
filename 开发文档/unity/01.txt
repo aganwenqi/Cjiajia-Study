@@ -1,0 +1,45 @@
+Material 材质
+Mathf 数学对象
+Screen 屏幕
+Camera 相机
+Rigidbody2D 刚体
+Edge Collider 2D 边缘碰撞
+    滑动条
+Invoke("函数",deltatime);延时调用
+
+Awake()脚本对象实例化时被调用
+using UnityEngine.SceneManagement; 场景命名空间
+  SceneManager场景
+
+Application.Quit(); 关闭游戏
+
+Camera.main.ScreenToworldPoint(Vector3)把该坐标转换成世界坐标
+GameObjiect.GetComponent<Renderer>().bounds.extents.x 获取该物体的半径
+Random 随机对象
+Random.Range(开始，结束)在该范围内生成随机数
+协程
+StartCoroutine(返回IEnumerator类型)开启该线程
+
+yield return new WaitForSecond(5s);延时5s
+
+复制对象
+（类型）Instantiate(要复制的对象，三维坐标，矩阵角度)
+销毁
+Destroy(对象,多少秒后)
+
+
+动作
+Quaternion.identity 矩阵没有旋转角度
+
+事件
+Input
+ mousePosition 获取鼠标移动的位置
+
+数学
+Clamp(坐标，最小值，最大值)如果在该范围返回第一个参数，否则分别看超过了哪个边界
+
+刚体
+GetComponent<Rigidbody2D>().MovePosition(三维坐标);表示当前移动到指定的三维坐标
+
+Vector3
+Distance(position,position)获取两者的距离;

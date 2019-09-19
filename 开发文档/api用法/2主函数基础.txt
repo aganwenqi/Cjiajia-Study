@@ -1,0 +1,11 @@
+glview->setFrameSize(500,300);//设置窗口大小
+auto scene = HelloWorld::createScene();//创建一个场景，场景类
+ director->setAnimationInterval(1.0 / 60);//设置游戏的帧率，1秒60张
+director->setDisplayStats(true);//设置是否显示帧数
+director->runWithScene(scene);//执行场景显示
+
+director->replaceScene(scene);//切换场景
+
+sprite->setContentSize(Size(200,200));设置图片大小
+
+pDirector->getRunningScene();//获取正在运行的场景

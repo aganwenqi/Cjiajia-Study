@@ -1,0 +1,9 @@
+
+世界坐标把该坐标转化为世界坐标，就是屏幕上的坐标
+ Point aimWorldPos = aim->getParent()->convertToWorldSpace(aim->getPosition());
+
+
+转化为相对坐标，aimWorldPos是参照物，而this是相对物，获得this到参照物距离的坐标
+  Point dstPos = this->getParent()->convertToNodeSpace(aimWorldPos);
+
+this->getContentSize();返回节点未变形的坐标

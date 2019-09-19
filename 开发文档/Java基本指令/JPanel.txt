@@ -1,0 +1,17 @@
+void paint(Graphics g);重写父类方法，绘图的方法
+（这个函数会在启动程序，窗口发生大小和调用repaint函数的时候会被调用）
+drawOval(int x,int y,int width,int height)绘制椭圆边框
+drawLine(int x1,int y1,int x2,int y2);画直线
+drawRect（int x,int y,int width,int height）;画矩形
+draw3DRect(x, y, width, height, raised);3d矩形，raised突出还是凹进
+setColor（）;设置颜色
+fillRect(int x,int y,int width,int height)填充矩形fill3DRect
+fillOval;填充椭圆
+
+加载图片
+Image tp=Toolkit.getDefaultToolkit().getImage(Panel.class.getResource("图片"));
+绘制地方
+drawImage(tp,100,100,300,300,this);
+setFont(new Font("华文宋体",Font.BOLD,50));设置字体，Font.BOLD字体样式
+drawString("德玛西亚",200,100);绘制字体
+17322075261@SLDLXY  

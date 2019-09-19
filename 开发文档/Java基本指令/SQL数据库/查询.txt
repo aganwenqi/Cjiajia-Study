@@ -1,0 +1,46 @@
+--查询语句
+select * from renwu --查询renwu表所有的内容
+select gan,wen from renwu --查询renwu表里字段gan和wen的内容
+select bianhao 编号,xingbie 性别 from renwu where bianhao<4 and xingbie='男'
+select distinct bianhao from renwu--查询renwu表里bianhao字段的内容，不重复
+select xingming 姓名,gongzi*12 年薪 from renwu--乘12得出的gongzi数据都会乘12
+select xingming 姓名,gongzi*12+isnull(buzhu,0)*12 年总输入 from renwu--isnull(buzhu,0)如果该字段为null,那么函数返回0,否则按照buzhu多少就是多少
+select xingming 姓名,ruzhishijian'入职时间' from renwu where ruzhishijian>'2005-01-01'--时间的四则运算需要按照这种格式才可以
+where paixing in(101,102,103)--查询这三个条件的
+where shangji is null --查询shangji为空的
+
+--排序，默认是升序 desc降序 中文的排序是按照拼音顺序和音调
+order by gongzi desc
+group by --分类汇总
+--模糊查询
+select xingming 姓名,gongzi*12 年薪 from renwu where xingming like'李%'--它的作用是把所有第一个为李的人查出来
+select xingming 姓名,gongzi*12 年薪 from renwu where xingming like'_进%'--它的作用是把所有空过一字后为进的人查出来
+--定义对象
+select a.xingming 姓名,b.xingming 上司 from renwu a,renwu b where a.shangji=b.paihang
+
+--按照条件查询
+select * from renwu where gongzi>8000--查询gongzi大于8000的
+
+--别名查询
+select xingming 姓名,gongzi*12+isnull(buzhu,0)*12 年总输入 from renwu order by 年总输入--别名降序
+
+select bianhao,avg(gongzi),sum(gongzi) from renwu group by bianhao--按照编号来求平均工资
+select bianhao,avg(gongzi) from renwu group by bianhao having avg(gongzi)<1500--筛选平均工资小于1500的部门
+
+笛卡尔集现象
+select * from renwu,bumen--多表查询，合并成一排对应
+select *from renwu,bumen where bumen.mingcheng='水军' and renwu.bianhao=bumen.bianhao--查找部门表水军的人
+
+复杂查询
+select xingming from renwu where paihang=(select shangji from renwu where xingming='李逵')--查找李逵的上级
+select xingming ,gongzi,bianhao,from renwu where zhiwu in
+(select distinct zhiwu from renwu where bianhao=5)--复杂查询
+select xingming,gongzi,pjgz,renwu.bianhao from renwu,(select avg(gongzi) pjgz,bianhao from renwu group by bianhao) lsb 
+where (renwu.bianhao=lsb.bianhao) and (renwu.gongzi>lsb.pjgz)--查询每个部门工资高于本部门平均工资的人
+select top 5 xingming,zhiwu,ruzhishijian from renwu order by ruzhishijian--显示前面5个
+select top 8 xingming,zhiwu,ruzhishijian from renwu where paihang not in
+(select top 5 paihang from renwu order by ruzhishijian) order by ruzhishijian--找出除了前面5个后的8个
+select distinct * into lsb from xiaobiao --将筛选出不重复的放到临时表里边去
+insert into xiaobiao select *from lsb--将xiaobiao里的内容插入到当前表
+--左表什么情况都全部显示，右边不成立显示null
+select a.xingming 姓名,b.xingming 上级 from renwu a left join renwu b on a.shangji=b.paihang

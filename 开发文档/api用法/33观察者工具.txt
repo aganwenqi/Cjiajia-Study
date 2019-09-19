@@ -1,0 +1,22 @@
+addObserver订阅消息
+Ref*target 要订阅的消息主体
+CallFuncO selector消息回调函数
+const std::string&name消息名称
+Ref*sender 要传递的数据
+
+postNotification发布消息
+const std::string&name消息名称
+Ref*sender 要传递的数据
+
+//订阅消息类型为test，不传递数据
+	NotificationCenter::getInstance()->addObserver(
+		this,  //订阅这里的消息
+		callfuncO_selector(TimeConuting::testMsg),//调用的回调函数
+		"test",//消息类型
+		NULL//要传递的数据假如传递字符串那么NULL改为  (Ref*)"OtherLayer.s data"
+                 );
+
+NotificationCenter::getInstance()->postNotification("test",NULL);//发布消息，跨节点,把这里的NULL改成字符串一样可以传递，
+但是不能跟订阅消息一起用
+
+testMsg（Ref*one）//one接收传递的消息

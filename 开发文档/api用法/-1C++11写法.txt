@@ -1,0 +1,6 @@
+virtual void setTagPossition(int,int)override;//重写
+Ref//容器类，也是lambda类
+std::vector<std::function<void(Ref*)>>&funcList=m_funcMap.at(MsgName);//找到这类消息的列表并拿出来用
+  std::vector<std::function<void(Ref*)>>funcList;
+	  funcList.push_back(func);//把这个阅读者放到这类容器
+	  m_funcMap[MsgName]=funcList;//把这类容器放到Map容器中

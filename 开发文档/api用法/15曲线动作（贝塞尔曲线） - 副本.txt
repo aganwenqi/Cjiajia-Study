@@ -1,0 +1,12 @@
+//精灵行走的曲线设置
+	ccBezierConfig bezier;//贝塞尔曲线
+
+	bezier.controlPoint_1=Point(100,0);//开始坐标
+	
+bezier.controlPoint_2 =Point(200,300);//中间坐标
+	
+bezier.endPosition =Point(200,50);//重点坐标
+	
+//创建CCBezierTo动作
+	
+BezierBy*bezierTo=BezierBy::create(4.0f,bezier);

@@ -1,0 +1,23 @@
+auto sprite1=Sprite::createWithSpriteFrame(SpriteFrame::create("sprite1.png",Rect(0,50,40,50)));
+//只绘制图片的一部分，左上角为原始坐标
+第一和第二个参数为从哪里开始计算，3和4参数表示显示的大小
+                                                     
+  //将图片加载到精灵帧缓存池
+   
+SpriteFrameCache *frameCache=SpriteFrameCache::getInstance();
+
+  frameCache->addSpriteFramesWithFile("girls.plist","girls.png"); 
+                                                          
+        auto sprite1=Sprite::createWithSpriteFrameName("sprite1.png");调用精灵缓冲区的图片            
+
+            getSpriteFrameByName(" .png")获得精灵                         
+
+
+
+
+
+                                          
+
+
+
+

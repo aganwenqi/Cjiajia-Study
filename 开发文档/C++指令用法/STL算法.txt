@@ -1,0 +1,175 @@
+   <algorithm>算法函数库
+   <functional>函数对象
+   ···函数对象···
+set<int,less<int>>      从小到大排序
+less<int>               从小到大
+greater<int>            从大到小
+less_equal<int>         小于或等于
+negate<int>             起负
+plus<int>               加
+multiplies<int>         乘
+modulus<int>            它的意思是 迭代器%参数，(取模)
+   ···函数适配器···
+bind2nd(谓词，参数)表示把绑定的参数一个一个与迭代器里对函数对象的类型进行比较
+not1(bind2nd)          取反
+ostream_iterator<type>(cout,'');输出流适配器
+
+   ···有毒···
+back_inserter(容器)没有指定容量的容器的插入
+双向容器的迭代器不能  iter++;只能 advance(iter,1);
+
+常用：
+比较、交换、查找、遍历操作、复制、修改、移除
+、反转、排序、合并等等。
+
+abs(参数)···               变成绝对值
+distance(b,e)···返回这两个迭代器的下标距离
+
+  <比较>···························
+ 返回boolean值
+equal(b,e,b2)                       比较两个容器是否相等
+equal(b,e,b2,二元谓词)
+lexicographical_compare(b1,e1,b2,e2)检查第一个区间是否大于第二个区间
+lexicographical_compare(b1,e1,b2,e2，二元谓词)
+
+返回ipair迭代器
+mismatch(b1,e1,b2)                  查找不相等的位置
+mismatch(b1,e1,b2，谓词)
+
+最小值，有最小值也有最大值max
+min_element(b,e)                    查找最小值
+*min_element(b,e,二元谓词)
+
+
+  <计算有数量>···························
+count(ivec.begin(),ivec.end(),4);   返回有多少个4
+count_if(ivec.begin(),ivec.end(),谓词);
+ 
+ <查找>···························
+   返回迭代器
+find(b，e，值）在该范围寻找值
+find_if(b,e,谓词);
+
+  ··范围查找··
+从左向右找
+search(b1,e1,   从一段迭代器寻找有没有第二段迭代器的值，返回第一个
+	b2,e2);  段迭代器找到的位置
+从右向左找
+find_end(b1,e1,b2,e2);
+
+find_end(b,e, 数组开头，数组结尾,二元谓词)
+  
+  ··或查找·· 
+find_first_of(b1,e1,b2,e2);如果第一对迭代器里出现了第二对迭代器里的任意一个迭代器就成立
+
+  ··查找连续两个相等的··
+adjacent_find(b,e)                   查找两个连续相等的值
+adjacent_find(b,e,二元谓词)
+
+  ··查找连续满足条件的值··
+search_n(b,e,5，8)                   查找有没有 5个8
+search_n(b,e,5，8,谓词)              查找连续5个符合谓词8的值
+二分查找，在该范围查找该数值
+
+  ···已序区间查找算法···
+  它们都可以使用谓词，返回booleam
+binary_search(b，e，数值)            查找该值
+includes(b1,e1,b2,e2)                b2~e2范围里的值b1~e1都有出现
+
+ 返回迭代器
+lower_bound(b,e,5)                   查到小于第一个5的位置
+upper_bound(b,e,5)                   查找大于第一个5
+equal_range(b,e,5)                   查找小于和大于第一个5，返回pair双迭代器
+
+ <遍历>···························
+  返回函数对象
+for_each(b，e，一元谓词)             对该区间的值依次遍历（11）
+
+ <修改>···························
+copy(b1,e1,b2)                       b1拷贝到b2(b2!=null)
+copy_backward(b1,e1,e)    从后面开始拷贝,（先拷贝b1里最后一个数据）
+reverse_copy(b1,e1,b2)               逆向的
+remove_copy_if                       可以使用谓词
+
+  ···自定义修改···
+（把迭代器一传进谓词，然后谓词返回值给迭代器2）
+   它比for_each灵活，但后者速度快
+transform(b1,e1,b2,谓词)             把b1的数据根据谓词修改后赋值给b2
+transform(b1,e1,b2,b3,谓词)          b1和b2执行了谓词的操作后给b3
+
+ <交换>···························
+swap_ranes(b1,e1,b2)把b1的数据交换b2前面的数据，返回b2没有交换的开始位置的迭代器
+
+  ···填充···
+fill(b1,e1,填充的数据)               在该范围内填充数据
+fill(back_inserter(空容器),数量,内容)填充多少内容
+
+generate(b,e,谓词);
+generate(b,n,谓词);
+
+ <替换>···························
+replace(b1,e1,6,42)                  把迭代器范围里所有的6换成42
+replace(b1,e1,谓词，42)              把满足谓词条件的数据换成42
+replace_copy(b1,e1,b2,5,55)把b1的数据拷贝到b2,在拷贝过程中把所有的5变成55
+replace_copy_if(b1,e1,b2,谓词,55);把5改成谓词，满足谓词
+
+ <删除>···························
+ 删除后会把后面的数据往前面挪动，后面的数据也不会删除掉（所以不是真正的删除）
+remove(b1,e1,3)          把所有的3删除，返回的迭代器指向没有移动的第一个
+remove_if(b,e,谓词)      满足谓词的都会被删掉
+remove_copy(b1,e1,b2,3); 把3删了然后再复制给b2
+remove_copy_if(b1,e1,b2,谓词)把满足谓词的第一个区间里的数删除，然后再copy给b2容器
+
+unique(b1,e1)把连续重复的数据删除只剩下一个，跟remove性质一样不是真正删除
+unique(b1,e1,greater)如果前面的数大于后面的数，那么删除后面的数，一直往后面比较
+unique_copy(b1,e1,b2)把连续的删除剩下一个，然后再赋值给b2
+unique_copy(b1,e1,b2,谓词)
+
+容器.erase(b,e)真正的删除
+
+ <变序>···························
+  ···逆转···
+reverse(b,e)  or  accumulate(b,e,0);;;;;;;;;;;;;;;;;;;;
+n 
+
+
+reverse_copy(b,e,b1)                  把数据逆转后给b1，原容器不变
+
+  ···旋转···
+rotabe(b,b,e)                         旋转，中间参数为旋转后第一个参数
+
+  ···排列···
+    返回false的话就已经没有排列组合了
+next_permutation(b,e)                 下一个排列组合
+prev_permutation(b,e)                 上一个排列组合
+
+  ···重排···
+random_shuffle(b,e)                    顺序打乱
+
+  ···分区···
+  返回一个迭代器，指向中心位置
+partition(b,e,谓词)                    把符合谓词的放左边（不稳定）
+stable_partition(b,e,谓词)             把符合谓词的放左边（稳定）
+
+ <排序>···························
+  返回值是 后最后一个迭代器
+sort(b,e)                              从小到大排序
+sort(b,e,谓词)                         根据谓词来排序
+stable_sort(b,e)                       稳定的排序
+
+  ···局部排序···
+partial_sort(b,b+5,e)                  只排序前面5个
+partial_sort(b,b+5,e,谓词)
+
+partial_sort_copy(b1,e1,b2,e2,谓词)    把b1排好序的内容copy给b2
+
+nth_element(b,b+5,e)b+5的位置为基点排序，把小于或等于它的放左边
+nth_element(b,b+5,e，谓词)
+
+  ···推排序算法···
+make_heap(b,e)                         以二叉树的规则排序
+pop_heap(b,e)                          把最大的放到最后
+
+  当定义好推后加入数据想把那个数据加入堆里，那么：
+push_back(数据)
+push_heap(b,e)                         把刚插入的数据放进已有的堆里

@@ -1,0 +1,26 @@
+#ifndef 
+#define
+#endif
+
+
+
+MenuItemImage图片菜单类
+ MenuItemImage* pCloseItem=MenuItemImage::create(
+	  
+ "CloseNormal.png",//正常状态下的图片
+	   
+"CloseSelected.png",//单机状态下的图片
+	   
+this,
+	   
+menu_selector(HelloWorld::menuCloseCallback)//单机菜单项时的回调函数);
+
+MenuItemLabel标签菜单类
+MenuItemLabel* pLabelItem=MenuItemLabel::create(label); //创建一个标签菜单项
+
+ Menu菜单总和//创建菜单，菜单跟场景概念差不多，也是虚拟的，用来存放各种菜单项
+	 
+ Menu* pMenu=Menu::create(pCloseItem,pLabelItem,NULL);
+pMenu->alignItemsVertically();//所有菜单垂直方向自动对其
+
+

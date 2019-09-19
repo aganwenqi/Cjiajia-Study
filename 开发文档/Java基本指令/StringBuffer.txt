@@ -1,0 +1,17 @@
+append(a);这个函数在字符串尾部添加a（a可以是任何一个值），这个函数有很多重载
+insert(int i,a);在下标i下面插入任何a的值（很多重载函数）
+
+StringBuffer类删除字符的方法
+delete(int a,intb);删除a~b的字符串
+deleteCharA(int a)删除下标a的字符
+
+StringBuffer变换字符的方法
+replace(int a,int b,String str)把下标a到b的字符串替换为str
+reverse();字符串的顺序调换
+setCharAt(int a,char ch)把a的字符串替换为ch
+
+StringBuffer一些其他方法
+toString();转化为String类型
+setLength(int a)设置当前字符串长度，如果长度不够，那么0补充，超过那么打断
+capacity()返回缓冲区的大小
+ensureCapacity(int a);分配当前缓冲区的大小，如果当前缓冲区小于a,那么当前缓冲区将会变为：当前缓冲区*2+2;

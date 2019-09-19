@@ -1,0 +1,44 @@
+二位数组
+int [,] a = new int[5,6]
+
+using System.Collections;
+
+ArrayList
+Add(数据)添加
+Insert(4,数据)插入
+Contains(数据)是否包含此元素
+RemoveAt(数据)
+RemoveRange(2,3)
+
+Hashtable
+Add(key,value)
+ContainsKey(key)查找是否有该值
+
+   //属性
+      public int gs
+      {
+          get { return a*100; }
+          set { a = value; }
+      }
+      对象.gs =3;
+      Console.Write(对象.gs)
+
+继承
+  virtual 虚函数
+  public oviiride void shou()重写虚函数
+  public new void show()隐藏基类中的方法
+  public son :  father 公有继承
+  抽象类，必须被实例化，默认是virtual
+  abstract class 
+    抽象类成员
+    public void show();
+    public override shou();抽象方法， 必须被子类重写
+  接口
+  public interface (类似c++的纯虚函数)
+       成员
+     void show();
+  
+密封类与密封方法
+ public sealed class
+ public sealed void a();
+

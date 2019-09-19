@@ -1,0 +1,3 @@
+Map
+xiaoruoMap.insert(i, lab);//把小ruo跟它的坐标i放到Map中
+Label *xiaoruonumber=xiaoruoMap.at(45);//选择该坐标的Value

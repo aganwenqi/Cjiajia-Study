@@ -1,0 +1,11 @@
+索引器
+当然索引器也是可以重载的
+public string this[int index] 类的索引器
+public string this[int index,string str5] 类的索引器
+
+委托(相当于c语言函数指针)
+delegate
+public delegate void  weituo(string);声明委托
+weituo mydey = new weituo(dc.show);
+mydey();
+mydey += dc.show;  多个委托绑定

@@ -1,0 +1,16 @@
+Statement sm=null;
+sm.executeQuery("select * from renwu");//查询
+sm.executeUpdate("insert into bumen values('8','a','aa')");//添加一行就返回多少（int）
+//里面也可以写删除修改
+
+新技术：
+ResultSet rs;//用来存数据库夺过来的东西
+PreparedStatement ps=null;
+Connection ct=null;
+ps=ct.prepareStatement("insert into bumen values(?,?,?)");
+ps.setString(2, "西亚");//在第几个问号插入数据
+ps.executeQuery();执行语句
+ct.prepareStatement("create daabase abcd");新建一个数据库
+prepareStatement();这个函数里可以写任何的sql语句
+
+查询：

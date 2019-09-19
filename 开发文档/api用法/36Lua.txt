@@ -1,0 +1,35 @@
+chang12
+
+链接器，输入，依赖编辑：lua51.lib
+c/c++，常规，附加包，EngineRoot)external\lua和$(EngineRoot)external\lua\luajit\include
+lua是c语言库，所以在c++中必须使用extern“C”声明
+extern"C"
+{
+#include<lua.h>
+#include<lualib.h>
+#include<lauxlib.h>
+};
+
+ lua_State*pL=lua_open();//获得lua，lua_State代表lua总类
+	 luaopen_base(pL);//lua有一些标志库，要使用这些库必须要学这三个函数
+	 luaopen_math(pL);
+	 luaopen_string(pL);
+
+     //打开lua脚本，返回0代表成功
+	 int err=luaL_dofile(pL,"HelloLua.lua");
+	 //重置栈顶，这样我们入栈的第一个元素就是1
+	 lua_settop(pL,0);
+	 //把该字符串放到栈顶中，然后lua就是拿他去全局表中找它对应的数据，找到后会放到栈顶中
+	 lua_getglobal(pL,"myName");
+
+//判断在栈顶1元素中的的值是否为字符串，是的话返回非零的值
+	 int isstr=lua_isstring(pL,1);
+	 if(isstr!=0)
+	 {
+		 //获取该1中的值
+		 const char*str=lua_tostring(pL,1);
+		 log("str=%c",str);
+	 }
+
+	 lua_close(pL);//释放lua
+

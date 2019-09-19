@@ -1,0 +1,44 @@
+JButton button=new JButton("我是一个按钮");
+setToolTipText("新建");它的作用就是提示信息
+Container a=mw.getContentPane().add(button);//获取该窗口的窗体并把按钮添加到该窗口
+JLabel 标签 setForeground(Color.blue);设置字体颜色
+setFont(new Font("宋体",Font.PLAIN,16));//设置字体
+表示点击这个表情会进入相应的网站，html格式是固定死了的
+Label("<html><a href='www.baiud.com'>申请密码保护</a>");
+setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));//设置可点击
+
+JTextField文本框类
+getText().trim();//取出输入的东西
+JPasswordField密码文本框
+JTextArea tx=new JTextArea(100,20);//创建一个文本域
+JCheckBox复选框
+JRadioButton单选按钮(ButtonGroup)把单选按钮放到这个组里，默认的功能按钮只能选一个
+JComboBox(添加字符串)拉列表框
+JList(添加字符串)；列表
+JScrollPane(tx);//滚动布局层（把文本区添加到滚动层）
+setVisibleRowCout(3);设置滚动，并可见部分为3
+JSplitPane(JSplitPane.HORIZONTAL_SPLIT,B1,B2);左右拆分吧b1和b2
+new ImageIcon("加载图片的位置");用于加载图片
+setOneTouchExpandable(true);激活的话组件就有全屏收缩的权限
+JTable bg1;//列表
+
+bg1=new JTable(jilu,ziduan);//后面是先记录后字段(表示把jilu容器里的全部添加到表格，字段列数
+为第二个容器的个数)
+AbstractTableModel该类配合JTable（具体帮助文档）
+bg1.setModel(new AbstractTableModel());设置内容
+bg1.getSelectedRow();返回鼠标点击到哪一行
+
+菜单：
+JToolBar();容纳工具栏的容器
+按钮.setToolTipText("新建");鼠标放在按钮上会有新建提示
+
+JMenuBar();容纳菜单的容器
+JMenu();一个菜单选项 setMnemonic('F')表示键盘CTRL+F可以快捷键打开
+JMenuItem("文件",new ImageIcon("图片路径"));最终的菜单
+JMenu的对象.addSeparator();这个表示上一个菜单跟下一个菜单之间会出现一行下划线
+this.setJMenuBar(菜单);把菜单添加到窗口
+ Image tp1=Toolkit.getDefaultToolkit().getImage(Panel.class.getResource("/pg1.png"));
+
+JWindow:
+JProgressBar//进度条setValue//设置进度条进度
+ImageIO.read(new File("image/login.gif"));获取这张图片image

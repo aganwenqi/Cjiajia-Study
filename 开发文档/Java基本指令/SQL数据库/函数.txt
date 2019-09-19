@@ -1,0 +1,13 @@
+--排序排到最后面
+distinct--有很多相同的那么只显示一个
+left join ... on--左外连接，表示无论什么情况左边的表都显示，右边的没有就为null
+not null--非空
+unique--唯一的，可以为空
+check(i>20 and i<30)--约束，约束到范围里，这个一般在建表里用
+default 18（一般建表时写在字段最后面）建立数据时如果不写默认就是18
+
+sum(字段) 求总数 
+avg(gongzi)求平均
+max(gongzi)求最大值
+min(gongzi)求最小值
+count(*)统计有多少记录

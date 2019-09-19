@@ -1,0 +1,26 @@
+create database cygl
+create table clerkInfo
+(
+cleld nvarchar(10) primary key,
+cleName nvarchar(10),
+cleSex nvarchar(10),
+cleAge int,
+cleZw nvarchar(10)
+)
+create table login
+(
+cleld nvarchar(10) foreign key references clerkInfo(cleld),
+passwd nvarchar(20),
+)
+drop table clerkInfo
+
+select * from clerkInfo
+select * from login
+insert into clerkInfo values('m001','李洁','女',25,'主管')
+insert into clerkInfo values('m002','黄梅','女',23,'管理员')
+insert into clerkInfo values('m003','王小人','男',23,'经理')
+insert into clerkInfo values('m004','钟情','女',30,'会计')
+insert into clerkInfo values('m005','无力','女',24,'服务员')
+
+insert into login values('m001','mhl001')
+insert into login values('m002','mhl002')

@@ -1,0 +1,24 @@
+void TowerPos::draw(Renderer *renderer, const kmMat4 &transform, bool transformUpdated) {
+//这个函数是继承的虚函数，当这个函数的对象背添加到场景时，cocos会每一帧都调用这个函数，
+	//画笔的操作
+    if(m_isDebug) {
+        _customCommand.init(_globalZOrder);//固定设置
+        _customCommand.func = CC_CALLBACK_0(TowerPos::onDraw, this, transform, transformUpdated);//传递参数及执行函数
+        renderer->addCommand(&_customCommand);将做好的属性添加到画笔库
+    }
+}
+ /* 绘制测试方框 */
+
+    kmGLPushMatrix();
+    kmGLLoadMatrix(&transform);
+
+    glLineWidth(5.0f);	// 设置画笔粗细
+
+    /* 绘制矩形 */
+    Point srcPos = Point(m_pos.x - RADIUS, m_pos.y + RADIUS);
+    Point destPos = Point(m_pos.x + RADIUS, m_pos.y - RADIUS);
+    DrawPrimitives::drawRect(srcPos, destPos);
+
+    glLineWidth(1);	// 恢复画笔粗细
+
+    kmGLPopMatrix();// 结束绘制

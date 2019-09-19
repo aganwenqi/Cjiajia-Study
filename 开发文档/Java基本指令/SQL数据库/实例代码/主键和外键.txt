@@ -1,0 +1,79 @@
+create database shuihu
+create table bumen
+(
+bianhao int primary key,
+mingcheng nvarchar(5),
+didian nvarchar(5)
+)
+create table renwu
+(
+paihang int primary key,
+xingming nvarchar(5),
+zhiwu nvarchar(5),
+shangji int,
+ruzhishijian datetime,
+gongzi numeric (6,1),
+buzhu numeric(5,1),
+bianhao int foreign key references bumen(bianhao)
+)
+insert into bumen values(1,'总头领','聚义厅')
+insert into bumen values(2,'文职','前山')
+insert into bumen values(3,'马军','左山')
+insert into bumen values(4,'步军','右山')
+insert into bumen values(5,'水军','山下')
+insert into bumen values(6,'后勤','后山')
+
+insert into renwu(paihang,xingming,zhiwu,ruzhishijian,gongzi,buzhu,bianhao)
+values(101,'宋江','寨主','2002-03-15',20000,3000,1)
+insert into renwu values(102,'芦俊义','寨主',101,'2002-06-16',18000,3000,1)
+insert into renwu values(103,'吴用','军师',101,'2002-08-19',17000,2800,2)
+insert into renwu values(104,'公孙胜','军师',103,'2002-09-22',16000,2600,2)
+insert into renwu values(105,'关胜','大将军',102,'2003-02-15',15000,2300,3)
+insert into renwu(paihang,xingming,zhiwu,shangji,ruzhishijian,gongzi,bianhao)
+values(106,'徐宁','小将',105,'2005-07-09',14000,3)
+insert into renwu values(107,'鲁智深','大将',102,'2003-04-22',13000,2000,4)
+insert into renwu values(108,'鲁人深','大将',107,'2003-09-08',12000,1800,4)
+insert into renwu(paihang,xingming,zhiwu,shangji,ruzhishijian,gongzi,bianhao)
+values(109,'李逵','小将',107,'2005-04-11',10000,4)
+insert into renwu values(110,'李俊','大将',102,'2005-01-16',13000,3000,5)
+insert into renwu(paihang,xingming,zhiwu,shangji,ruzhishijian,gongzi,bianhao)
+values(111,'院小二','小将',110,'2005-06-24',13000,5)
+insert into renwu(paihang,xingming,zhiwu,shangji,ruzhishijian,gongzi,bianhao)
+values(112,'院小七','小将',110,'2005-06-15',12000,5)
+insert into renwu values(113,'柴进','总管',101,'2004-03-15',11000,1000,6)
+insert into renwu values(114,'李英','总管',113,'2006-03-10',10000,600,6)
+insert into renwu(paihang,xingming,zhiwu,shangji,ruzhishijian,gongzi,bianhao)
+values(115,'时迁','小总管',113,'2007-11-19',8000,6)
+select * from renwu
+select * from bumen
+select gongzi,zhiwu,bianhao from renwu where xingming='鲁智深'
+select distinct bianhao from renwu--查询renwu表里bianhao字段的内容，不重复
+select xingming 姓名,gongzi*12 年薪 from renwu--乘12得出的gongzi数据都会乘12
+select xingming 姓名,gongzi*12+isnull(buzhu,0)*12 年总输入 from renwu--isnull(buzhu,0)如果该字段为null,那么函数返回0
+select xingming 姓名,ruzhishijian'入职时间' from renwu where ruzhishijian>'2005-01-01'--时间的四则运算需要按照这种格式才可以
+--模糊查询
+select xingming 姓名,gongzi*12 年薪 from renwu where xingming like'李%'--它的作用是把所有第一个为李的人查出来
+select xingming 姓名,gongzi*12 年薪 from renwu where xingming like'__深%'--它的作用是把所有空过一字后为进的人查出来
+--定义对象
+select a.xingming 姓名,b.xingming 上司 from renwu a,renwu b where a.shangji=b.paihangv
+
+select top 8 xingming,zhiwu,ruzhishijian from renwu where paihang not in
+(select top 5 paihang from renwu order by ruzhishijian) order by ruzhishijian--找出除了前面5个后的8个
+
+insert into renwu(paihang,xingming,zhiwu,shangji,ruzhishijian,gongzi,buzhu,bianhao)
+
+create table xiaobiao
+(
+ bianhao int,
+ mingcheng varchar(10)
+)
+insert into xiaobiao values(1,'xiaobiao1')
+insert into xiaobiao values(2,'xiaobiao2')
+select distinct * into lsb from xiaobiao --将筛选出不重复的放到临时表里边去
+delete from xiaobiao 
+insert into xiaobiao select * from lsb--将xiaobiao里的内容插入到当前表
+select * from xiaobiao
+drop table lsb
+
+--左表什么情况都全部显示，右边不成立显示null
+select a.xingming 姓名,b.xingming 上级 from renwu a left join renwu b on a.shangji=b.paihang

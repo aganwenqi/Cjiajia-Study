@@ -1,0 +1,9 @@
+ void menuCloseCallback(cocos2d::Ref* pSender);//回调函数
+  auto scene = HelloWorld::createScene();//创建一个场景，场景类
+
+    // run
+ 
+   director->runWithScene(scene);//执行场景显示
+auto 自动识别类的类别
+
+setAnchorPoint(Point);//描点9

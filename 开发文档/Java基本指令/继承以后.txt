@@ -1,0 +1,8 @@
+getClass();该函数获取当前的类名
+equals()比较
+"父类名："+this.getClass().getSuperclass().getName()
+/*
+Object obj=this;
+if(obj instanceof Ceshi)
+测试该对象是不是Ceshi这个类
+*/

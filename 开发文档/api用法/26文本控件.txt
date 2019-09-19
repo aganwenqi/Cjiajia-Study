@@ -1,0 +1,4 @@
+		Text* m_scoreLab;//分数标签
+//修改分数标签
+		m_scoreLab->setText(Value(fenshu).asString());
+	m_scoreLab=(Text*)Helper::seekWidgetByName(UI,"scoreLab2");

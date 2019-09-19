@@ -1,0 +1,15 @@
+create database playcards--创建一个斗地主服务端数据库
+create table yonghu
+(
+userld nvarchar(10) primary key,
+userName nvarchar(10),
+)
+create table private
+(
+userld nvarchar(10) foreign key references yonghu(userld),
+userpasswd nvarchar(20),
+)
+insert into yonghu values('m001','Dlmax')
+insert into private values('m001','ganwenqi12')
+select * from yonghu
+select * from private

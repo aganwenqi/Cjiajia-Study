@@ -1,0 +1,12 @@
+new BorderLayout();这种布局方式是东南西北中，东East,西West,男South,北North,中Center
+GridLayout(6,6，7,7);网格布局管理器（后面的7和7是每个组件布局的间隙）
+add(buuton,"Center");//布局居中
+CardLayout();这种布局用法如下:
+JPanel jp=new JPanel();
+CardLayout mycard=new CardLayout();创建扑克牌叠在一起的布局
+jp.setLayout(mycard);//这个容器里的所有内容都会叠在一起
+mycard.first(jp);这样就会先显示jp容器里的第一个
+mycard.last(jp);这样就会先显示jp容器里的最后一个，还有等等的一系列的方法
+JTabbedPane();面板选择器(add("普通用户"，mk));这里表示一个面板
+JDialog();空布局类
+setBorder(BorderFactory.createLoweredBevelBorder());空布局的对齐方式

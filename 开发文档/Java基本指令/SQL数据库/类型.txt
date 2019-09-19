@@ -1,0 +1,18 @@
+int primary key(主键)：性质：不能重复和空
+外键：
+int foreign key references bumen(bianhao)，表示是bumen表编号主键的外键
+字符类型：
+nvarchar(50);--表示可以输入50个中文字体，这个类型用于输入中文非常好
+（上面这种带n类型的采用了unicode编码，特点是字节和汉字占用空间一样）
+char字符串
+varchar可变长字符串
+
+一般存中文用带n的，英文数字就用不带n的，固定长度用出了var类型的，变化的用var
+
+数值类型：
+int ,bigint(相当于long),float,numeric(6,3)--表示数字智能有6位，小数3位
+
+时间类型：
+datetime
+getdate()获取当前时间（系统时间），自己设计那就传一个字符串进去‘111’
+'年-月-日'严格按照这样写可以进行四则运算

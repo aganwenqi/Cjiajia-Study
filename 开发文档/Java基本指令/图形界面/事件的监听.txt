@@ -1,0 +1,4 @@
+implements ActionListener//要添加监听事件必须继承它，而他的接口函数是：
+void actionPerformed(ActionEvent e)
+if(e.getActionCommand().equals("red"))//判断是否是red标签 的控件触发了事件
+setActionCommand("")设置监听的字符

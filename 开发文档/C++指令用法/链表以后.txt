@@ -1,0 +1,18 @@
+struct 表示创建结构体，具体看91课程
+int a=atoi(str.c_str())该函数的atoi表示把字符串转换为整型，最后面的字母表示类型，这个函数是c语言函数，就是因为是c语言函数，所有c_str()表示把str对象成员转换为c格式
+system("cls")清空屏幕指令
+cin.get()暂停在此处，需要按回车解除
+
+
+//MFC
+CBitmap处理位图类
+CBrush处理话刷类
+CFont处理字体类
+CPalette处理调色板类
+CPen处理画笔类
+SetTimer(1,50,NULL);//第一个参数表示定时器数量，第二个参数表示定时时间，以毫秒为单位，第三个用NULL表示不使用//回调函数，指向OnTimer数据处理函数
+VK_A~VK_Z代表键盘a到z，数字其他也一样
+VK_UP,VK_DOWN,VK_LEFT,VK_RIGHT代表键盘上下左右键
+
+
+dynamic_cast<son*>(pf)->;该语句表示把基类pf的指针强制转换成son派生类的指针（95章）

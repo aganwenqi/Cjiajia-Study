@@ -1,0 +1,30 @@
+import java.util.Scanner;
+Scanner cin=new Scanner(System.in);
+int x=cin.nextInt();键盘输入整形
+
+import java.io.InputStreamReader;它的read()方法一次只能读取一个字符
+import java.io.BufferedReader;它的readLine()方法可以读取所有输入的字符串，回车结束
+import java.io.IOException;异常类
+
+BufferedReader a=new BufferedReader(new InputStreamReader(System.in));
+int s=a.readLine().intValue();输入一个整形变量
+
+监听：
+键盘
+implements KeyListener键盘的监听，它有4个抽象方法
+paint(Graphics g)绘图
+void keyTyped(KeyEvent e)//键下某键试调用的方法
+void keyReleased(KeyEvent e)//释放某个键时调用的方法
+void keyPressed(KeyEvent e)//按下某键时调用的方法
+e.getKeyCode();获取按下的是哪个键盘
+addKeyListener
+
+鼠标
+addMouseListener瞬间反应时监听
+addMouseListener实时监听
+implements MouseListener鼠标单击双击监听
+implements MouseMotionListener鼠标移动实时的监听
+
+窗口
+implements WindowListener窗口监听
+addWindowListener

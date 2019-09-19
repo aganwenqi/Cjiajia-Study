@@ -1,0 +1,22 @@
+--新建
+create database shuguo--新建一个shuguo数据库
+create table renwu--新建一张表(注意，建表要在相应的数据库里建)
+(    bianhao int,--字段，类型
+     xingming nvarchar(5),
+     xingbie nchar(1),
+     zhiwu nvarchar(10),
+     nianling int
+)
+
+
+--增加内容
+select gan 甘,wen from renwu --向gan字段设置别名
+
+--表里的记录的添加
+insert into renwu values(1,'热'，'的','de'，100)--向renwu表里面添加一行数据
+--如果重复执行会一直添加
+insert into renwu (bianhao,xingming) values(1,'张飞')括号有多少个字段就添加多少个字段
+
+--修改
+update bumen set didian='德玛西亚' where bianhao='1'
+alter table yonghu add Win int default 0--增加字段

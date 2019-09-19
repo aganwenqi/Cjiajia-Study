@@ -1,0 +1,19 @@
+	create database xsgl
+	create table xuesheng
+	(
+	 xuehao nvarchar(5) primary key,
+	 xingming nvarchar(5),
+	 xingbie nvarchar(1) check(xingbie='男' or xingbie='女'),
+	 nianling int,
+	 jiguan nvarchar(5),
+	 yxmc nvarchar(5)
+	)
+	drop table xuesheng
+	select * from xuesheng
+
+	insert into xuesheng values('xs001','贾宝玉','男',22,'北京','计算机')
+	insert into xuesheng values('xs002','王熙凤','女',26,'天津','管理')
+	insert into xuesheng values('xs003','陈景龙','女',23,'南京','表演')
+	insert into xuesheng values('xs004','黄家明','女',20,'上海','表演')
+	insert into xuesheng values('xs005','李思凯','男',27,'南京','计算机')
+	insert into xuesheng values('xs006','史湘云','女',20,'福建','表演')

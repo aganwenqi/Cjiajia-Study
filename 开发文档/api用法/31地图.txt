@@ -1,0 +1,33 @@
+TMXTiledMap*map=TMXTiledMap::create("sdf.tmx");//创建一张地图
+  //加载对象层
+	  TMXObjectGroup*objGroup=Map->getObjectGroup("objects"); //TMXObjectGroup存放了对象层所有对象
+	  //加载玩家坐标对象
+	  ValueMap playerPointMap=objGroup->getObject("PlayerPoint");
+	  float playerX=playerPointMap.at("x").asFloat();
+	   float playerY=playerPointMap.at("y").asFloat();
+
+	  player->setPosition(Point(playerX,playerY));
+Layer* parent = (Layer*)getParent();获得父亲，最大的那个
+
+ /* 地图方块数量 */
+    Size mapTiledNum = m_map->getMapSize();
+
+    /* 地图单个格子大小 */
+    Size tiledSize = m_map->getTileSize();
+
+ /* 如果主角坐标小于屏幕的一半，则取屏幕中点坐标，否则取主角的坐标 */
+    float x = std::max(spritePos.x, visibleSize.width / 2);//谁大取谁
+std::min(x, mapSize.width - visibleSize.width / 2);//谁小取谁
+
+//获得地图唯一标识
+	int tiledGid=mate->getTileGIDAt(tiledPos);
+Value propertiles=m_Map->getPropertiesForGID(tiledGid);//获得这个格子所有属性
+		ValueMap propertiesMap = propertiles.asValueMap();//在地图中获得权利
+		Value prope=propertiesMap.at("Collidable");//获取属性
+		//如果属是1那么直接返回
+		if(prope.asString().compare("true")==0){return;}
+
+	//消除格子
+		TMXLayer*barrier=m_Map->getLayer("barrier");
+		barrier->removeTileAt(tiledPos);//该格子消失
+if(propertiesMap.find("Collidable")!=propertiesMap.end())//判断哪类的格子

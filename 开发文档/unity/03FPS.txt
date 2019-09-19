@@ -1,0 +1,4 @@
+  从摄像机发射一条摄像到鼠标位置
+Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+RaycastHit hit;
+Physics.Raycast(ray , out hit, 100f);//把检测到的物体转换为hit,返回真表示检测到了

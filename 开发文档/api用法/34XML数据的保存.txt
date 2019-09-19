@@ -1,0 +1,40 @@
+保存数据类UserDefault
+UserDefault::getInstance();获得这个类的create
+
+
+ //保存Bool数据，第一个参数为唯一标识，第二个为要保存的数据
+void setBoolForKey(const char *pKey,Bool value);
+
+
+ //保存Int数据，第一个参数为唯一标识，第二个为要保存的数据
+void setIntegerForKey(const char *pKey,int value);
+
+ //保存float数据，第一个参数为唯一标识，第二个为要保存的数据
+void setFloatForKey(const char *pKey ,float value);
+
+ //保存Double数据，第一个参数为唯一标识，第二个为要保存的数据
+void setDoubleForKey(const char *pKey,double value);
+
+ //保存String数据，第一个参数为唯一标识，第二个为要保存的数据
+void setStringForKey(const char *pKey,string value);
+
+获取就用get
+void getBoolForKey(const char *pKey);
+void setBoolForKey(const char *pKey,Bool value);//假如没有这个标识，那么返回我们传递的标识
+
+
+	/* 把指定坐标对象生成到plist配置文件 */
+void TowerPosEditorLayer::outputPosToPlistFile(Vector<PosBase*> posList, const char* sFilePath)
+{
+	ValueMap fileDataMap;
+	int index=1;
+	for(auto PosBase:posList)
+	{
+		ValueMap data;
+		data["x"]=PosBase->getPos().x;
+		data["y"]=PosBase->getPos().y;
+		fileDataMap[StringUtils::toString(index)]=Value(data);
+		index++;
+	}
+	FileUtils::getInstance()->writeToFile(fileDataMap,sFilePath);//写入保存xml文件
+}

@@ -1,0 +1,6 @@
+--删除表(数据库)
+drop table renwu--删除renwu表
+--删除记录（只删记录）
+delete from renwu--删除任务整个表的记录
+delete from renwu where xingming='张飞'--删除姓名为张飞的那行数据
+delete from renwu where gongzi<9000--按条件删除

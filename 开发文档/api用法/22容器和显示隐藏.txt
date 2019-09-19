@@ -1,0 +1,27 @@
+Vector<Sprite*>gan//定义一个只接受Sprite的容器
+gan.pushBack(one)//把one精灵存到容器表
+
+setVisible(true);//设置精灵的显示或者隐藏
+
+Vector
+Vector<Label*> vec;排队类
+<Label*>表示只接受这类的参数
+for(auto lab:vec)//c++11新写法（容器），输出容器所有内容
+vec.pushBack()括号接受Label类的参数，先定义的排第一个
+size();返回对象的数量
+at(index);返回index下标的那个对象
+front();返回第一个对象
+back()返回最后一个对象
+eraseObject(object)删除object对象
+erase（index）删除该下标的对象
+clear（）清空所有对象
+
+map容器，小写的能够接收小写的容器参数
+Vector也有小写的
+大写的都是小写封装的
+
+std::vector<std::function<void(Ref*)>>funcList//表示创建一个接收动作无返回值带Ref参数的回调函数
+
+std::string str=FileUtils::getInstance()->getStringFromFile(sPath);//读取Csv文件数据
+//保存到字典
+	mCsvmap.insert(sPath,csvDate);

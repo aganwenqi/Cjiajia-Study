@@ -1,0 +1,3 @@
+setGlobalZOrder(1);//设置渲染归类，这样保证一次渲染该类的所有图片，而且它是跨节点的
+setLocalZOrder(1);//设置精灵的优先渲染问题，局部的
+setOrderOfArrival(1);//当setLocalZOrder相同时那么这个函数来决定优先权

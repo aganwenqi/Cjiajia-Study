@@ -1,0 +1,17 @@
+ void menuCloseCallback(cocos2d::Ref* pSender);//回调函数
+Director::getInstance()->replaceScene(TransitionSlideInT::create(4.0f,myScene::createScene()));//replaceScene切换后旧场景会被释放
+Director::getInstance()->pushScene(TransitionJumpZoom::create(4.0f,HelloWorld::createScene()));//不会释放
+
+所有场景切换函数：
+TransitionJumpZoom:缩小弹出
+TransitionProgreeRadialCCW:逆时针切换
+TransitionProgreeHorizontal:水平向右
+TransitionPtogreeInOut:从里向外
+TransitionCrossFade:原场景慢慢消失，新场景慢慢显示    
+TransitionPaggeForward:翻页
+TransitionSlideInT：往下切换
+TransitionFadeTR:方块切换左下角
+TransitionFadeUp:下向上百叶窗
+TransitionTurnOFFtiles:方块切换到处都是
+还有很多没写出来
+

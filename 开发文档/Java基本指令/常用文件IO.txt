@@ -1,0 +1,26 @@
+flush把缓冲区的数据强行输出，关闭文件时写，它作用是完善输出流
+FileReader("D:/Android/Flie1/src/HelloWord.java");字符输入流
+FileWriter字符输出流
+int a=fre.read();
+while(a!=-1){
+System.out.print((char)a);
+a=fre.read();//输出整个文件的内容
+}
+//字符流只适合复制文本文件
+
+FileOutputStream
+FileInputStream也可以用字节流，但是中文是乱码，因为中文占据两个字节，而一个字符占用两个字节，所以字符流可以显示中文，但是字节流什么都可以复制，比如歌什么的，字符流就不行
+BufferedInputStream缓存流拷大型文件快
+
+ByteArrayOutputStream ss=new ByteArrayOutputStream();字节数组流
+DataOutputStream s=new DataOutputStream(ss);数据流
+
+转换流：
+BufferedReader z=new BufferedReader(new InputStreamReader(System.in));
+把键盘输入System.in字节流转换为字符流
+readLine();读取字符
+
+p1=new PrintStream(FileOutputStream("路径"));
+p1.println(31232);这个保存出来的文件人看得懂
+System.setOut(p1);加了这句以后的输出都会输出到p1这个流里，也就是文件
+System.setErr(p2);出现异常会输出到这个流里，比如异常

@@ -1,0 +1,31 @@
+String(char[]a,int i,intj);利用字符串的字串创建字符串
+String s=new String("12345");
+s(1);返回第二个字符串
+s.getChars(3,5,a,2);把s下标3到5的字符串复制到a的下标2后面
+substring(int a,int b)返回下标a~b的字符串
+s1.compareTo(s2);s1=s2返回0,s1<s2返回-1，s1>s2返回1
+boolean startsWith(String a);如果前缀是a那么返回真，否则返回假
+boolean endsWith(String a);如果后缀是a那么返回真，否则返回假
+boolean equalslgnoreCase(String a)此方法区分不管大小写a都等于调用它的字符串那么返回真
+boolean equals(String a)相等返回真
+boolean regionMatches(boolean quit,int began,String other,int offset,int len);
+此方法表示该字符串从began到len的字符串是否等于other字符串从offset到len的字符串是否相等，相等返回真，不相等返回假（quit真不区分大小写，假区分大小写）
+
+String的搜索方法:
+int index(int ch)//返回搜索到ch的下标位置，找不到返回-1
+int index(int ch，int a)从a那里开始搜索，返回搜索到ch的下标位置，找不到返回-1
+int index(String s)返回第一次搜索到字符串s的位置，找不到返回-1
+nt index(String s,int a)从a那里开始搜索，返回第一次搜索到字符串s的位置，找不到返回-1
+把index改成lastIndexOf那么用法就是相反的
+
+String类的一些替换方法：
+String concat(String a);于字符串a相加
+String replace(char oldchar,char new char);把老的字符换成新的
+String toLoweCase();把所有字符变成小写
+String toUpperCase();把所有字符变成大写
+String trim();删除首尾的空格字符
+split(" ");
+
+"+string+"在字符串里可以这样加入变量
+
+

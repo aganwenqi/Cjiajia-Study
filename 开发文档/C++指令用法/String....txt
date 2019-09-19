@@ -1,0 +1,71 @@
+static 静态成员变量，内存直到程序销毁才结束的变量，一般用在不会改变内容或参数的地方
+
+typedef 该函数声明类型的别人，比如typedef int  Yoxi;,Yoxi就是int的别名
+friendl友元函数
+
+continue 跳转到当前循环开头
+
+
+    《》《》<C语言字符串风格>《》《》
+strncat(ch1,ch2,3) 表示把第二个字符串的前面三个函数复制到第1个字符串中去
+ 
+strncpy(ch1,ch2,3)//表示把第二个字符串的前三个字符替换掉第一个字符串前三个的的字符
+
+str1.replace(0,2,str2,2,2); //表示第一个0和第二个2表示从下标0到2开始替换，最后面面两个2表示
+
+    《》《》<C++语言字符串风格>《》《》
+   ····插入····
+insert 是string类插入字符的函数
+
+str1.append(str2,2,3);添加str2从坐标2开始2个数据到str1后面
+append("数据")添加到目标后面
+
+   ····替换····
+把str2的下标2开始的2个元素替换掉str1中0到2的,	 //他支持char字符串的替换
+//交换的话对半也会交换(183)
+  swab(ch,ch1,strlen(ch));
+
+//string 的交换是swap，且不会对半交换，而是完整掉换
+  str.swap(str1);
+
+//把ch1的前面6个字符赋值给ch
+memmove(ch,ch1,6);
+
+//copy为string类的拷贝函数，把str1的第2个元素开始的6个元素拷贝给ch1字符串
+int n=str1.copy(ch1,6,1);
+
+replace(11,3,"3th")把从下标11开始的的3个元素替换为3th
+   ····删除····
+erase(2,2)  string类的函数，表示从第二个字符开始删除2个
+erase(3)  表示只保留3个字符   （180）
+erase()  表示删除全部字符
+   ····查找····
+p=strchr(ch,"w") 表示把w在ch中哪个位置拿出来给指针p，ch是字符串
+
+//表示查找str中w在哪个位置，0为从0开始找没，没有找到返回npos他等于-1(181)string::npos
+string::size_type f=str.find('w',0);
+
+//从右边像左边查找
+rfind();
+
+//表示查找第一个与w不同的，查找同的用first_of
+f=str.find_first_not_of('w',0);
+
+//表示查找与w不相同的最后一个
+f=str.find_last_not_of('w');                     //find前面加r表示反向查找
+
+endIndex=str.asString().find(sSep);//查找这个字符的下标
+   ····比较····
+//返回0表示相等，返回1表示s1大于s2，返回-1表示s1小于s2(182)
+s1.compare(s2);
+
+//表示从s1的0到2的坐标的数跟s2比,当然要跟s2的那几个比可以这样(0,2,s2,0,1)
+当然也可以跟char比较
+k=s1.compare(0,2,s2);
+
+   ····截取····
+str.asString().substr(starIndex,endIndex);//截取这段字符串，第一个参数为开头下标，第二个为结束下标，
+substr(6)从第六个开始到最后
+substr()截取全部
+
+str.empty()  该函数判断str是不是空，假如空返回false，否则true

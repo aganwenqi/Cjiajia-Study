@@ -1,0 +1,20 @@
+Java的类型有如下：
+int 整形
+byte 字节型
+short 短整型
+long 长整型
+float 单精度型
+double 双精度型
+char 字符型
+boolean 布尔型
+String 字符串类型
+Integer int类型的包装类
+
+关键字：
+static 跟C++差不多
+synchronized只要用它修饰了要么全部执行，要么全部不执行
+synchronized（"随意字符串"）{}括号里的会全部执行或全部不执
+transient有这个修饰其它数据不能改变被修饰了的类型，传不进来
+System.exit(-1);程序退出
+Math.random()随机出现0~1之间的数字
+Collections;集合类总类
