@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ha</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="400" style="background:#A9A9A9">
+	   很抱歉，您的浏览器暂时不支持html5的canvas
+	</canvas>
+
+	<script>
+		var c=document.getElementById("canvas");
+		var ctx=c.getContext("2d");
+		ctx.lineWidth=2;
+		function show1(){
+		var gradient=ctx.createLinearGradient(0,0,c.width/2,c.height);
+		 // var gradient=ctx.createRadialGradient(c.width/2,c.height/2,10,c.width/2,c.height/2,200)
+		 	gradient.addColorStop(0,'blue');
+		 	gradient.addColorStop(0.25,'white')
+		 	gradient.addColorStop(0.5,'red')
+		 	gradient.addColorStop(0.75,'yellow')
+		 	gradient.addColorStop(1,'orange')
+		    ctx.fillStyle=gradient;	
+		    ctx.font='50px 隶属';
+		    ctx.fillText("HTML5视频",100,100);
+           }
+        function show2(){
+        	ctx.strokeStyle="orange";
+        	ctx.fillStyle="red";
+        	ctx.font='30px 宋体';
+        	ctx.moveTo(200,20);
+        	ctx.lineTo(200,300);
+        	ctx.stroke();
+
+        	ctx.beginPath();
+        	ctx.textAlign="start";
+        	ctx.fillText("德玛西亚",200,50);
+
+        }
+        function show3(){
+        	ctx.strokeStyle="orange";
+        	ctx.fillStyle="red";
+        	ctx.font='30px 宋体';
+        	ctx.moveTo(300,20);
+        	ctx.lineTo(300,300);
+        	ctx.stroke();
+
+        	ctx.beginPath();
+        	ctx.textBaseline="top";
+        	ctx.fillText("德玛西亚",300,50);
+
+        	ctx.beginPath();
+        	ctx.textBaseline="middle";
+        	ctx.fillText("德玛西亚",300,100);
+
+        	ctx.beginPath();
+        	ctx.textBaseline="ideographic";
+        	ctx.fillText("德玛西亚",300,150);
+
+        	ctx.fillStyle="#000";
+			ctx.arc(300,50,3,0,Math.PI*2)
+			ctx.fill()
+
+			ctx.fillStyle="#000";
+			ctx.arc(300,100,3,0,Math.PI*2)
+			ctx.fill()
+
+			ctx.fillStyle="#000";
+			ctx.arc(300,150,3,0,Math.PI*2)
+			ctx.fill()
+
+
+        }
+        show3();
+	</script>
+</body>
+</html>

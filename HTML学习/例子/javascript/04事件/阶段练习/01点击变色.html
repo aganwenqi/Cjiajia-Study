@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+		margin: 15px auto;
+		background:orange;
+		width:200px;
+		height:200px;
+		border-radius:200px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script>
+		var div1=document.getElementById('div1')
+		div1.onclick=myFun1;
+		function myFun1(){
+			div1.style.background='red';
+			div1.onclick=myFun2;
+		}
+		function myFun2(){
+			div1.style.background='orange';
+			div1.onclick=myFun3;
+		}
+		function myFun3(){
+			div1.style.background='blue';
+			div1.onclick=myFun1;
+		}
+	</script>
+</body>
+</html>

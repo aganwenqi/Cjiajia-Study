@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ha</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="800" style="background:#A9A9A9">
+	   很抱歉，您的浏览器暂时不支持html5的canvas
+	</canvas>
+	<script>
+		var c=document.getElementById("canvas");
+		var ctx=c.getContext("2d");
+		ctx.fillRect(0,0,100,100);
+		var dates=ctx.getImageData(0,0,100,100);
+		alert(dates.data[0]);
+		alert(dates.data[1]);
+		alert(dates.data[2]);
+		alert(dates.data[3]);
+	</script>
+</body>
+</html>

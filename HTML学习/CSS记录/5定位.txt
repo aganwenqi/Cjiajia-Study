@@ -1,0 +1,31 @@
+z-index:200设置层
+
+position
+相对定位
+position:relative;相对定位
+left:150px  向左边偏移，当然上下右也是可以偏移的top,bottom,
+
+绝对定位
+position:absolute;相对与父类的坐标来偏移，当然父类必须设置了定位
+position:static；默认值，没有设置定位
+
+窗口定位
+position:fixed;相对于窗口定位，不会因为因为滚动的内容而被滚动走
+z-index:3设置层叠顺序
+
+clip
+裁剪:一般裁剪图片
+clip:rect(top,right,bottom,left)位置比如top距离图片上边的距离，该属性只有设置了绝对定位的时候才生效
+
+vertical-align:设置元素的垂直对齐方式
+baseline默认
+top:找到同行中最高的元素并与它对齐
+middle与父类中部对齐
+bottom,该元素底部与父元素底部对齐
+vertical-align:10px这里也可以设置偏移像素，百分比也行，相对于父元素
+
+float:浮动
+left,right左右浮动
+none默认值
+  clear:left,right,both清楚左、右、所有的浮动
+

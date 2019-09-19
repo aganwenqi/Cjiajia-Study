@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type='text/css'>
+	
+	</style>
+</head>
+<body >
+    <div id='bd'></div>
+	<a href="" >德玛西亚</a><hr>
+	<input type="button" id='df' onclick="func()" value='变身'>
+	<input type="button" id='df' onclick="func1()" value='变身1'>
+	<input type="button" id='df' onclick="func2()" value='变身2'>
+
+	<script>
+		var sh=document.getElementById('bd');
+		var img1=document.createElement('img');
+		function func(){
+			img1.src='I:/HTML学习/材料/a.gif';
+			sh.appendChild(img1);
+		}
+		function func1(){
+			sh.removeChild(img1); 
+		}
+	</script>
+</body>
+</html>

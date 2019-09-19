@@ -1,0 +1,26 @@
+有些属性没有通过w3c认证需要在前面加上  -webkit-   等其他
+
+font-size规定字体的大小
+单位：px像素，%当前字体的百分比，em当前字体大小的倍数
+
+font-style:规定文本字体样式
+italic倾斜
+
+font-weight:规定文本字体的粗细
+bold定义粗体字体
+
+font-family:设置什么字体，默认字体为宋体
+宋体，楷体   这里如果没有宋体就会显示下一种，以此类推
+
+font:设置字体的所有属性,它至少要设置字体的大小和系列(这两个属性不能颠倒)
+属性 属性 属性      空格隔开每一种属性
+
+css3
+@font-face{
+font-family:"abc"; 别名
+src:url('字体地址')//嵌入字体的地址
+}
+p{font-family:abc}给元素引入字体
+
+
+line-height:字体的行距

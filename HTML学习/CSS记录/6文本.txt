@@ -1,0 +1,24 @@
+text-align对齐方式
+line-height 设置行高
+text-indent 设置文本首行缩进em
+text-decoration 像文本添加修饰，none默认，underline下划线，overline上划线，
+    line-through穿过文本的一条线，blink定义闪烁文本
+letter-spacing 设置字符间距
+word-spacing 设置字/单词间距，normal就等于设置为0
+text-transform 设置对象中的文本的大小写
+    none默认，capitalize大写字母开头，uppercase大写，lowercase小写
+text-shadow 想文本添加阴影，可设置多个阴影，用逗号隔开
+white-space设置文本空白处
+direciton设置文本方向，ltr左向右，rtl右向左
+word-wrap允许对长的不可分割的单词进行分割并换行到下一行
+  break-word在长单词或URL地址进行换行
+word-break 规定非中文韩文本的换行规则，normal默认，break-all允许在单词内换行
+，keep-all只能在半角空格或连字符处换行
+text-fill-color文本填充颜色
+text-stroke 文本边框颜色
+   text-stroke-width文字的描边宽度
+   text-stroke-color文字的描边颜色
+text-overflow：设置是否使用一个省略标记（...）,
+   clip溢出的文本删掉
+   ellipsis溢出部分显示（。。。）
+

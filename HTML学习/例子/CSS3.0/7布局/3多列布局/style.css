@@ -1,0 +1,29 @@
+@charset="UTF-8"
+*{
+	margin:0;
+	padding:0;
+}
+section{
+	padding:10px;
+	width:1000px;
+	height:800px;
+	margin:10px auto;
+	background:rgba(200,105,154,0.8);
+	-webkit-columns:200px  4;
+	-webkit-column-rule:5px solid green;
+	column-gap:50px;
+
+}
+h4{
+text-align:center;
+column-span:all;
+}
+p{
+	text-indent: 2em;
+	line-height: 2em;
+}
+-webkit--webkit-columns:200px  4;;
+-moz--webkit-columns:200px  4;;
+-ms--webkit-columns:200px  4;;
+-o--webkit-columns:200px  4;;
+-webkit-columns:200px  4;;

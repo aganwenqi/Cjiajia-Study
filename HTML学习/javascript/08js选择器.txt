@@ -1,0 +1,2 @@
+document.querySelector("#u2>li+li");选择指定的元素
+document.querySelectorAll("#u2>li+li");返回集合

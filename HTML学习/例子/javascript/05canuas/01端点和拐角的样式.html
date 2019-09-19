@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>ff</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="300" style="background:#A9A9A9">
+		很抱歉，您的浏览器暂不支持HTML5的canvas
+	</canvas>
+	<canvas id="canvas1" width="500" height="300" style="background:#A9A9A9">
+		很抱歉，您的浏览器暂不支持HTML5的canvas
+	</canvas>
+	<script>
+	//线帽(结束端点)
+		 var canvas=document.getElementById('canvas');
+		 var cxt=canvas.getContext('2d');
+		 cxt.lineWidth=28;
+		 cxt.beginPath();
+		 cxt.lineCap="butt";
+		 cxt.strokeStyle='orange';
+		 cxt.moveTo(30,30);
+		 cxt.lineTo(300,150);
+		 cxt.stroke();
+
+		 cxt.beginPath();
+		 cxt.lineCap="round";
+		 cxt.strokeStyle='orange';
+		 cxt.moveTo(30,30);
+		 cxt.lineTo(300,30);
+		 cxt.stroke();
+	</script>
+	<script>
+	//拐角样式
+		 var canvas=document.getElementById('canvas1');
+		 var cxt=canvas.getContext('2d');
+		 cxt.lineWidth=18;
+		 cxt.strokeStyle='green';
+		 cxt.lineJoin="round";
+		 cxt.moveTo(80,30);
+		 cxt.lineTo(400,30);
+		 cxt.lineTo(400,120);
+		 cxt.closePath();
+		 cxt.stroke();
+	</script>
+</body>
+</html>

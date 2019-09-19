@@ -1,0 +1,23 @@
+border-collapse:separate默认值，collapse边框的合并
+border-spacing设置分割单元格边框的距离
+caption-side:设置表格标题位置，top默认，bottom底部
+table-layout:fixed;设置了该属性单元格将不会拉伸
+empty-cells:hide设置表格中的单元格是否进行显示,hide为隐藏，合并情况无效
+
+列表属性：
+list-style-type:none无标记，disc实心圆，circle空心圆，square实心方块
+decimal为数字，默认是1
+zero是0开头数字，比如01，02,03
+lower-roman小写罗马
+upper-roman大写罗马数字
+lower-alpha小写英文字
+upper-roman大写英文字
+
+list-style-position:设置列表标志的位置
+inside;向右边移动的趋势,文字换行时头文字会和标志垂直
+outside文字换行时头文字会比表示凹进一个标志的位置
+list-style-image:将图像设置为列表的标志
+url("图片的地址");
+
+
+list-style:属性值 属性值 属性值一次设置，type、position、image

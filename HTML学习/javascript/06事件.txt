@@ -1,0 +1,9 @@
+对象.onclick=函数   添加事件
+对象.onload=函数 当该对象加载完毕后调用
+对象.onchange=函数 当事件改变的时候调用
+
+对象.addEventLisener('事件名称',函数名称)  鼠标单击事件：click
+对象.removeEventLisener('事件名称',函数名称) 删除指定事件
+ie8以下用他们自己的事件处理:attachEvenet('事件名称',函数名称)
+
+测试是否支持：对象.addEventLisener 如果支持返回真否则返回假

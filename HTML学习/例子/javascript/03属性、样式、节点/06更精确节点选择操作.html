@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type='text/css'>
+	
+	</style>
+</head>
+<body >
+	<ul id="ul1">
+		<li>列表项1</li>
+		<li>列表项2</li>
+		<li>列表项3</li>
+	</ul>
+		<input type="text" id="input1" value="测试文本框">
+		<div id="div1">测试文本<em>倾斜效果</em>结束啦</div>
+		<a href="http:://www.baidu.com" id="aid" target="_self">百度</a>
+		<hr>
+		<input type="button" value="myFunc1" onclick="myFun1()">
+		<input type="button" value="myFunc2" onclick="myFun2()">
+		<input type="button" value="myFunc3" onclick="myFun3()">
+		<input type="button" value="myFunc4" onclick="myFun4()">
+		<input type="button" value="myFunc5" onclick="myFun5()">
+		<script>
+			var div1=document.getElementById('div1');
+			var input1=document.getElementById('input1');
+			var ul1=document.getElementById('ul1');
+			function myFun1(){
+				var ch1=ul1.children;
+				alert(ch1.length);
+				for(var a=0;a<ch1.length;a++){
+					ch1[a].style.background='red';
+				}
+			}
+			function myFun2(){
+				var ch1=ul1.firstElementChild;
+				 // alert(ch1.length);
+					ch1.style.background='red';
+			}
+		</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		canvas{background:#A9A9A0;}
+	</style>
+</head>
+<body>
+	<canvas id="mycanvas" width="1000" height="600">
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('mycanvas');//获取id名称的元素
+		var c=canvas.getContext('2d');//设置绘图方式
+		c.lineWidth=20;
+		c.strokeStyle="yellow";
+		c.moveTo(50,50);
+		c.lineTo(200,50);
+		c.lineTo(200,150);
+		c.lineTo(50,150);
+		c.lineTo(50,50);
+		c.stroke();
+		c.beginPath();
+
+		c.rect(250,50,150,100);
+		c.stroke();
+		c.beginPath();
+
+		c.fillStyle="red";
+		c.fillRect(50,180,150,100);
+		c.stroke();
+		c.beginPath();
+
+		c.lineWidth=6;
+		c.arc(280,230,30,0,Math.PI);
+		c.stroke();
+		c.beginPath();
+
+		c.arc(280,230,30,0,Math.PI,true);
+		c.fill();
+		c.stroke();
+        c.beginPath();
+        
+        c.lineWidth=10;
+        c.strokeStyle="green";
+        c.moveTo(500,500);
+        c.arc(500,500,300,Math.PI*7/6,Math.PI*11/6,false);
+        c.closePath();
+        c.stroke();
+        c.fill();
+
+        c.beginPath();
+        c.moveTo(500,500);
+        c.fillStyle="gray";
+        c.arc(500,500,150,Math.PI*7/6,Math.PI*11/6,false);
+        c.closePath();
+        c.stroke();
+        c.fill();
+        c.lineWidth=3;
+        c.strokeStyle="purple";
+        c.fillStyle="purple";
+        c.font="60px 隶属"
+        c.strokeText("滑",380,310);
+        c.strokeText("稽",550,310);
+        c.fill();
+	</script>
+</body>
+</html>

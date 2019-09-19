@@ -1,0 +1,26 @@
+background
+设置背景填充的东西:
+  background-color:设置背景颜色
+  background-image:url();设置图片
+
+设置属性:
+  background-position:设置填充的坐标，当然它也可以设置百分比，位置也可以设置上下  左右
+  background-repeat:no-repeat 设置不重复，如果不设置那么就会重复填充满
+      repeat-x沿着X方向重复，当然也可以有Y方向
+    background:属性 属性 属性 一次性设置前面三个属性值，没有先后顺序
+  background-attachment:背景图片是否固定或随着滚动而移动
+    scroll默认值，fixed随着滚动而滚动
+
+CSS3新增的属性:
+background-size:规定图片的大小,也可以用百分比等
+   cover该属性会拉伸把它的父层的X或者Y方向给填充满为止，等比例缩放的
+   contain该属性会拉伸把它的父层给填充满，图片会完全显示
+
+background-clip规定背景的绘制区域，它会对图片进行裁切
+   border-box背景被裁剪到边框盒
+   content-box背景被裁剪到内容框
+   padding-box背景被裁切到边框的内部
+
+background-origin:规定背景图片的定位区域
+   border-box设置该属性填充的起始位置是边框的0，0开始
+   content-box起始位置在内边距后

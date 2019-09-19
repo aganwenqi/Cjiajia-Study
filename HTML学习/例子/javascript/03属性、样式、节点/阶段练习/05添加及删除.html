@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+	input[type='button']{
+		width:60px;
+		height:60px;
+		border-radius:30px;
+		outline:none;
+	}
+	</style>
+</head>
+<body>
+	<p>会员ID:<input type="text" id="VIP-ID" value=""></p>
+	<p>姓&nbsp名:<input type="text" id="VIP-name" value=""></p>
+	<p>
+		<input type="button" value="添加" onclick="addVIP()">
+		<input type="button" value="删除" onclick="deleteVIP()">
+	</p>
+	<ul id="VIP-ul">
+		<h3>俱乐部会员名单</h3>
+	</ul>
+	<script>
+		function addVIP(){
+			var VIPid=document.getElementById('VIP-ID').value;
+			var VIPname=document.getElementById('VIP-name').value;
+			var ulObj=document.getElementById('VIP-ul');
+			var liObj=document.createElement('li');
+			if(VIPid!=null&&VIPname!=null)
+			{
+			liObj.innerHTML='会员ID'+VIPid+'<br>'+'会员名:'+VIPname;
+			ulObj.appendChild(liObj);
+			}else{
+				alert('不能为空');
+			}
+		}
+		function deleteVIP(){
+			var ulObj=document.getElementById('VIP-ul');
+			var VIPid=document.getElementById('VIP-ID').value;
+			var liArr=document.getElementsByTagName('li');
+			for(var i=0;i<liArr.length;i++){
+				var VIPxx=liArr[i].innerHTML;
+				if(VIPxx.indexOf(VIPid)!=-1){
+					ulObj.removeChild(liArr[i]);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

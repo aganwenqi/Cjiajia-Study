@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>8-29</title>
+	<style type="text/css">
+		#progress{
+			height:10px;
+			width:1px;
+			background:red;
+			border-radius:4px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button onclick="play()">播放/暂停</button>
+		<button onclick="Big()">放大</button>
+		<button onclick="Small()">缩小</button>
+		<button onclick="getCurTime()">当前时间</button>
+		<button onclick="setCurTime()">回到开始</button>
+		<button onclick="prev()">后退</button>
+		<button onclick="next()">前进</button><br>
+		<button onclick="Muted()">关闭声音</button>
+		<button onclick="VolumeUp()">声音+</button>
+		<button onclick="VolumeDown()">声音-</button>
+		<button onclick="slow()">慢进</button>
+		<button onclick="fast()">快进</button>
+		<button onclick="getVidDur()">测试</button>
+	</div>
+	<video id="video" src="F:/HTML学习/材料/01.mp4" controls="controls" width="400"></video><br>
+	<div id="progress"></div>
+	<script>
+		var v=document.getElementById("video");
+		v.defaultMuted=true;
+		//播放和暂停
+		function play(){
+			if (v.paused){
+				v.play()
+			}else{
+				v.pause()
+				this.innerHTML='暂停'
+			}
+		}
+		//放大和缩小
+		function Big(){ 
+		if (v.width<800) {
+	 		v.width+=20; 
+		 }else{
+		 	v.width==800;
+		 }
+		}
+		function Small(){ 
+		if (v.width>150) {
+		 	v.width-=20; 
+		 }else{
+		 	v.width==150;
+		 }
+		} 
+		//当前播放时间
+		function getCurTime(){ 
+		  alert(v.currentTime);
+		}
+		//回到开始
+		function setCurTime(){ 
+		  v.currentTime=0;
+		}
+
+		//后退
+		 function prev(){
+		 	v.currentTime-=30;
+		 }
+		 //前进
+		 function next(){
+		 	v.currentTime+=30;
+		 }
+		 //设置静音
+		 function Muted(){
+		 	if (v.muted) {
+		 		v.muted=false;
+		 		event.target.innerHTML='关闭声音'
+		 		event.target.style.background='white'
+		 		document.getElementById('range').value=0.8
+
+		 	}else{
+		 		v.muted=true;
+		 		event.target.innerHTML='打开声音'
+		 		event.target.style.background='red'	
+		 		document.getElementById('range').value=0;
+		 	}
+		 }
+
+
+		//音量控制
+		 function VolumeUp()
+		{
+		    if(v.volume<1)
+		      v.volume+=0.1;
+		}
+		function VolumeDown()
+		{   
+		    if(v.volume>0)
+		     v.volume-=0.1;
+		}
+		function Volume(){
+			x=document.getElementById('range').value;
+			// alert(x)
+			v.volume=x
+		}
+		//  v.controls=false;
+		//  alert(v.controls);
+		// alert(v.defaultPlaybackRate) 
+		// v.defaultPlaybackRate=0.3;
+		// v.load()
+		//添加快进和慢进  默认的速率为1
+		//alert(v.playbackRate)
+		function slow(){
+			if (v.playbackRate<1) {
+				v.playbackRate-=0.2;
+			}else{
+				v.playbackRate-=1;
+			}
+		}
+		function fast(){
+			if(v.playbackRate<=1){
+			v.playbackRate+=0.2;
+			}else{
+				v.playbackRate+=1;
+			}
+		}
+		function getVidDur()
+		{ 
+			alert(v.currentTime/v.duration*100+'%')
+			alert(v.currentTime/v.duration*100+'%')
+			alert(v.currentTime/v.duration*100+'%')
+		}
+		var div1=document.getElementById('progress');
+		function progress(){
+			var Divwidth=Math.floor((v.currentTime/v.duration)*v.width)+'px';
+			div1.style.width=Divwidth;
+		}
+		window.onload=function(){
+		v.addEventListener('timeupdate',progress);
+	     }
+
+	</script>
+	
+</body>
+</html>
+
+

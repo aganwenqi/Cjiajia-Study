@@ -1,0 +1,70 @@
+htm5大纲算法
+gsnedders.html5.org/outliner/
+
+head头里的内容:
+<link rel="stylesheet" type="text/css" href="">
+rel表示要参照外部样式，type参照文档类型，href外部样式的地址
+
+css文件：
+头写上 @charset "utf-8"  编码形式
+p,h3,div{color:red !impoartant}可以这样来对多个元素进行设置样式,!impoartant强制优先级
+
+选择器：
+*{color:red}通用选择器
+p{color:red}元素选择器
+#p{color:red}id选择器       ，id="p"
+.class{color:red}类别选择器，class="class"
+h3.class{color:red}指定类别选择器，class="class"
+
+z-index:200设置层
+
+属性选择器：
+input[value]{color:red;}input为元素，value为属性值，只要有value属性的input       元素都有效
+       input[value][style]{color:red;}表示同时拥有两个这种属性的
+       input[value="a"]{color:red;}选择该元素的某个属性值
+       input[value~="a"]{color:red;}表示只有这个属性里面有这个"a"值得才有效
+       css3新增的属性选择器：字符串的选择
+        input[value^="a"]{color:red;}选择具有value属性且属性值开头为"a"字符串开头
+        input[value&="a"]{color:red;}选择具有value属性且属性值开头为"a"字符串结尾
+        input[value*="a"]{color:red;}选择包含有"a"字符串的
+
+关系选择器:
+ul li{}:选择ul里面所有li元素（后代选择器）
+ul>li{}只对ul子元素的第一层有效果（子元素选择器）
+ul+li{}选择紧贴在ul的li元素有效果（相邻选择器）
+ul~li{}选择所有和ul同级且在它后面所有li元素
+
+伪元素选择器：
+p::first-letter{}设置该元素中第一个字体
+::first-line{}设置第一行
+a::before{ content:"点击"}它会在a标签前面加上“点击”
+a::after{content:"点击"}它会在a标签后面加上“点击”contenet:url(图片地址)插入图片
+a::selection{}设置被选中时的样式
+     伪类选择器：
+         结构伪类选择器：
+             :root{}设置文档跟元素
+             e:first-child{}设置文档的所有的第一个元素
+             e:last-child{}最后一个子元素
+             li:only-child{}选择唯一一个子元素
+             li:only-child-type{}跟它同类里面只有一个跟它同类型的元素
+             li:nth-child(2){}设置该元素的第二个元素
+             tr:nth-child(odd){}奇数行，even偶数行，3n表示为3的倍数那行才有效
+             li:nth-last-child(n){}父元素的倒数第n个元素
+             li:nth-of-type(n){}同类型中同等级的兄弟
+             li:nth-last-of-type(n){}同类型中同等级的兄弟
+             li:empty里面不能有任何内容，空格也不行
+
+伪类选择器UI
+a:active{}被激活后的样式
+a:hover{}当鼠标悬浮在那位置上添加样式
+a:link{}向未被访问过的链接添加样式
+avisited{}向已经被访问过的链接添加样式
+a:focus{}获得焦点时激活
+
+input:checked{}选中时的效果
+input:disabled{}选择禁用的元素
+input:enabled{}选择启用的元素
+
+a:target{}选择当前活动的元素（某个被链接的元素）一般用到锚点
+:not(input){}除了input元素以外的所有元素
+

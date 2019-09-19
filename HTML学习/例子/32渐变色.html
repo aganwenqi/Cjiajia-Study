@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5-12 课堂演示</title>
+	<style type="text/css">
+		canvas{background: #A9A9A0}
+	</style>
+
+</head>
+<body>
+		<canvas id="canvas" width="800" height="600">
+		您浏览器暂不支持HTML5的canvas元素
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas'); 
+			c=canvas.getContext('2d');
+			g=c.createLinearGradient(50,50,200,200);
+			g.addColorStop(0,"#000000");
+			g.addColorStop(0.5,"red");
+			g.addColorStop(1,"#FFFFFF");
+			c.fillStyle=g;
+		    c.fillRect(50,50,200,200)
+            c.beginPath();
+            g=c.createRadialGradient(450,450,100,390,390,300);
+			g.addColorStop(0,"#000000");
+			g.addColorStop(0.5,"red");
+			g.addColorStop(1,"#FFFFFF");
+			c.fillStyle=g;
+		    c.fillRect(250,250,500,500)
+	</script>
+</body>
+</html>

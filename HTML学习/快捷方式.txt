@@ -1,0 +1,5 @@
+ul>li*5   输入这一行再按tab键就会出现5个li标签
+ul+li   这种方式是同级的
+ul>li.item$*5 在ul里面生成5个有class属性，属性名为item1~5的元素
+#aaa 生产带id的div
+p.class.class2 同时生产带多个class的元素

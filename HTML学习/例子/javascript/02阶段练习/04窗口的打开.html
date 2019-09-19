@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script>
+		var middlewin;
+		function middlewin(){
+			var w=200,h=300;
+			var x=(screen.width-w)/2;
+			var y=(screen.height-h)/2;
+			var str='top='+y+',left='+x+',width='+w+',height='+h;
+			middlewin=open('','',str);
+		}
+	</script>
+	<input type="button" id="cic" value="打开窗口" onclick="middlewin()">
+</body>
+</html>
+
+

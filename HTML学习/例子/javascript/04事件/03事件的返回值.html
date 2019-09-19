@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			background:green;
+			padding:20px;
+			width:150px;
+			height:150px;
+			left:15px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script>
+		var div=document.getElementById('div1');
+		function myFun1(){
+			alert(event.type);
+			alert(myFun1.arguments.length);
+		}
+		document.onclick=myFun1
+	</script>
+</body>
+</html>

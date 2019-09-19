@@ -1,0 +1,100 @@
+form元素19
+用来定义一个表单
+<form action=""  method="post" novalidate="novalidate">novalidate设置该属性可以免了输入邮箱错误的提示
+ 用户名：<input type="text">这个代表输入框
+ 密码：<input type="password">密码框
+ <input type="submit">提交按钮
+</form>
+action指的是表单的发送地址（服务器地址）
+method的post属性是隐藏信息提交，get是附加在网址后面提交
+
+input20
+<input type="text" value="请输入用户名"> type="radio"协议同不同意选项
+type有很多属性，每种属性对应不同的东西，比如这里是一个文本框
+value是框里面默认值
+placeholder:里面默认提示值
+maxlength设置表单中输入的元素个数
+readonly="readonly"
+readonly:只能读的属性，它会发送到服务器
+disabled="disabled"设置为不可修改的提示
+required:设置该选项是必须填的
+
+
+type的属性如下：
+text:文本框
+password:密码框
+submit:提交按钮
+reset:重置按钮
+button:普通按钮
+image;图片按钮 src图片路径
+hidden:隐藏字段，该内容不会显示在页面上
+search:搜索框，里面有多一个x清楚按钮
+autofocus:设置光标
+accesskey:指定快捷键获得焦点
+tabindex:设置它的值可以在按tab键的时候光标跳到哪里，属性值为数值
+autocomplete：开启浏览器自动记忆更能，值有on/off
+一些格式属性：
+email:邮箱属性
+url：输入一个网址
+tel:输入电话号码
+number:输入数量，可设置范围，比如：min="5" max="10"
+range:滑动条，也可以设置范围
+
+时间：
+time：时间
+date:日期
+week:周
+month:月
+datetime-local:本地时间
+color:建立一个颜色的输入框
+
+文件：
+file:打开文件的按钮
+    accept属性可以设置选取文件属性类型，比如image/png
+    multipe属性可以设置一次选取多个属性
+
+单选，复选框：
+checkbox复选框，checked设置默认选取
+radio单选框
+
+
+下拉列表21
+select建立下拉菜单：
+option是在下拉菜单里面建立选项
+optgrounp用来分组,label该属性设置分组名称
+size的用法是在下拉菜单显示子项的个数
+multiple设置是否可多选
+datalist该下拉菜单可以输入来预判:
+这个下拉菜单需要绑定，具体看11
+form属性可以把外面的按钮绑定到form框架里
+
+标注标签22
+<input type="checkbox" id="a" name="dx" value="平面设计">这个是一个选项
+<label for="a">平面设计</label> 如果添加这一句跟上面一句关联那么点击文字一样能选中
+
+多行文本框23
+textarea：
+rows设置行数，cols设置宽度
+placeholder设置提示
+
+按钮及表单重写24
+button他可以设置图片
+formaction设置提交到哪个服务器地址
+
+Output元素25
+output为输出元素
+本章设置自动加法，关系到jsp
+
+进度，度量条26
+progress进度条
+meter度量条
+
+Fieldset与Legend、Keygen元素27
+Fieldset边框
+legend在边框中添加文字
+keygen加密
+
+隐藏和显示三角框28
+details被它套中的内容都可以有标题的效果，open该属性默认是打开状态
+summary它是为details添加标题
+

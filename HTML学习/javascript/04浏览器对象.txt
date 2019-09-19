@@ -1,0 +1,42 @@
+window.变量  输出全局性的变量
+
+confirm();弹出提示，有返回值
+prompt("消息",值)点确定返回输入的值，点取消返回null
+
+focus() 作用是操作后这个窗口出现在最前面
+浏览器窗口的控制
+open();默认新建一个窗口
+open('地址','名称','height= ,width=');新建一个窗口并跳转该网页，第二个参数:新窗口名称
+第二个参数：_parent在本窗口打开，第三个参数：就是窗口的属性
+
+close();
+
+setTimeout(函数,1000)一秒后执行该函数，返回值会返回id
+setInterval(函数,1000)周期性执行
+clearTimeout(id)清楚该定时器
+clearInterval(id)
+
+返回浏览器属性
+innerwidth,innerheight
+
+History
+history.lenght返回打开过多少个网页
+back();加载当前页面前面一个url
+forward();加载下一个url
+go(1)返回指定页面，数值表示哪个页面
+
+Loation.
+href返回完整的路径
+assign(url)跳转到该url
+reload()重新加载当前文档
+
+replace(url)替换当前的网页，他不会产生新的记录
+
+Screen.返回用户的浏览器属性
+不包含任务栏的宽度
+avaiHeight
+avaiWidth
+包括任务栏
+height,width
+
+Nacigator也是返回浏览器相关的参数

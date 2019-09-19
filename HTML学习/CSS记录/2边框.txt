@@ -1,0 +1,26 @@
+border:2px solid red;宽度，样式，颜色
+border-width:宽度,规律跟盒魔型一样
+border-color:颜色
+border-style:样式 none、dotten点状、dashed虚线、solid实线、double双线等
+border-bottom-   边框也可以单独设置下边框或上边框等
+
+圆角：
+border-radius:20px设置圆角,像素指的是圆的半径，当然也可以用em单位
+border-top-left-radius也可以规定设置圆角
+
+border-radius:3em/2em 设置圆x和y的距离
+
+图片边框：
+border-img-source:url("");图片边框，只设置这一步每个角上只有一个点
+border-image-slice:30边框背景图的分割方式，一张图片分为9块，30表示一块的长度
+border-image-width设置边框宽度
+border-image-outset:30px边框向外移动
+border-image-repeat:stretch  拉伸默认值，repeat中间部分不断重复，round重复的地方都是完整的，不会出现一半的
+
+border-image-slice:30 fill这样切割中间部分也会被填充
+
+阴影：
+box-shadow:5px 5px 5px 5px green inset    x、y偏移，模糊值,外延值，颜色
+上面用逗号隔开又可以加多一个阴影,insert内阴影，outset为外阴影
+  #div{}
+  #div:hover{}鼠标放下后的效果

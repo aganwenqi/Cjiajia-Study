@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sdf</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="main">
+		<video src="../../材料/01.mp4" id="video" controls="controls" width="400" height="300"></video>
+		<div class="bar">
+			<div id="probar" style="width:800px"><div id="progress"></div></div>
+
+			<button id="playorpause" onclick="PlayOrPause()">
+			4
+			</button>
+			<button class="next" onclick="Next()">7</button>
+			<buttom class="back" onclick="Prev()">8</buttom>
+			<buttom class="muted0" onclick="Muted()" id="quite">X</buttom>
+			<input type="range" id="vol" min="0" max="1" step="0.1" onchange="Volume()">
+			<button class="pic" onclick="CatchPicture()">截图</button>
+		</div>
+		<canvas id="canvas" width="300" height="200"></canvas>
+	</div>
+	<script>
+		var video=document.getElementById('video');
+
+		function PlayOrPause(e){
+			if(video.paused){
+				video.play();
+				var a=event;
+				 a.target.innerHTML=';';
+				 a.style.background='green';
+				
+			}else{
+				video.pause();
+				var a=event;
+				a.target.innerHTML='4';
+				a.style.background='red';
+				
+			}
+		}
+		//前进和后退
+		function Prev(){
+			video.currentTime+=60;
+		}
+		function Next(){
+			video.currentTime-=60;
+		}
+		function Muted(){
+			if(video.muted){
+				video.muted=false;
+				event.target.innerHTML='X';
+				event.target.style.background='orange';
+				document.getElementById('vol').value=video.volume;
+			}else{
+				video.muted=true;
+				event.target.innerHTML='x';
+				event.target.style.background='white';
+				document.getElementById('vol').value=0;
+			}
+		}
+		function Volume(){
+			video.volume=event.target.value;
+			var gan=document.getElementById('quite');
+			if(video.volume<=0){
+				gan.innerHTML='x';
+				gan.style.background='white';
+			}else{
+				gan.innerHTML='X';
+				gan.style.background='orange';
+			}
+		}
+		function Progress(){
+			var progress=document.getElementById('progress');
+			progress.style.width=(video.currentTime/video.duration)*100+'%';
+		}
+		window.onload=function(){
+			var probar=document.getElementById('probar');
+			probar.addEventListener('click',progress_click);
+			video.addEventListener('timeupdate',Progress);
+        }
+        function progress_click(){
+        	var progress=document.getElementById('progress');
+        	var w=parseInt(document.getElementById('probar').style.width);
+        	if(event.offsetX){
+        		video.currentTime=video.duration*(event.offsetX/w);
+        	}
+        }
+
+        function CatchPicture(){
+        	var canvas=document.getElementById("canvas");
+        	var ctx=canvas.getContext('2d');
+        	ctx.drawImage(video,0,0,canvas.width,canvas.height);
+        }
+	</script>
+</body>
+</html>

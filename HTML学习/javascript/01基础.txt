@@ -1,0 +1,50 @@
+<script type="text/javascript" src="java.js"></script>引入js代码
+
+输出
+document.write("内容")
+除了输出内容以外，
+它还可以输出带html标签的内容
+当然也可以输出换行<br/>分割线等
+
+弹出窗口
+alert('的吗下呀');弹出一个窗口;
+
+事件
+onclick最常用之一
+onclick=alert('dsfsdf');单击该按钮就会相应相对应的事件
+
+数据类型
+var a定义一个变量，该变量可以是字符串，数值等
+Undefined没有声明的变量，用typeof去测试会返回该类型，typeof 类型
+null 跟java一样
+Array 数组 它跟java也是一样可以直接用var来定义，也可以new Array();
+
+对象：
+var a={name:'的吗'，age:18}
+a是一个对象，里面对应了一些值
+输出也跟c++一样
+
+类型查询
+typeof(变量)返回值有undefined,boolean,number,string等等等；
+
+非法检查：
+isNaN(数值)检查数值是否非法，非法返回真，否则返回0
+
+
+在html标签中输出变量
+<li>变量为：+变量
+
+\n换行
+\r回车
+\b退格符
+\"输出双引号
+
+科学计数法
+1.22e2表示10的二次方
+
+进制
+八进制第一位一定是0，后面的就是0~7
+十六进制的前面两位一定是0x
+
+运算符
+===表示全等运算符

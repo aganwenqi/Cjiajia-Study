@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>哈撒给</title>
+	<style type="text/css">
+	div{
+		background:green;
+		width:150px;
+		height:150px;
+		position:relative;
+	}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<input type="button" id="btn1" value="myFunc1" onclick="alert('德玛夏亚')">
+	<input type="button" id="btn2" value="myFunc2">
+	<input type="button" id="btn3" value="myFunc3">
+	<script>
+		var div1=document.getElementById('div1');
+		var body=document.getElementsByTagName('body')[0];
+		function Myevent(){
+			div1.innerHTML='按下键盘事件dd';
+			div1.style.background='red';
+		}
+		body.onkeydown=Myevent;
+		
+	</script>
+</body>
+</html>

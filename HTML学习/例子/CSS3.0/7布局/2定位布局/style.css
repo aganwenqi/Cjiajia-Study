@@ -1,0 +1,41 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	width:960px;
+	margin:0 auto;
+	position:relative;
+}
+header{
+	width:960px;
+	height:150px;
+	background:rgba(0,0,0,0.3);
+/*	position:absolute;
+	left:0;
+	top:0;*/
+}
+aside{
+	width:200px;
+	height:500px;
+	background:rgba(200,200,20,0.8);
+/*	position:absolute;
+	left:0px;
+	top:150px;*/
+}
+section{
+	width:760px;
+	height:500px;
+	background:rgba(20,200,20,0.6);
+	position:absolute;
+	left:200px;
+	top:150px;
+}
+footer{
+	width:960px;
+	height:120px;
+	background:rgba(180,90,45,0.6);
+/*	position:absolute;
+	left:0px;
+	top:650px;*/
+}

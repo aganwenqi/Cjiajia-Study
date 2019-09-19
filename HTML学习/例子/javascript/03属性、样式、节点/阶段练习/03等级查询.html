@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		section{
+			background:rgba(150,50,25,0.25);
+			width:350px;
+			height:150px;
+			margin:100px auto;
+			font-size:24px;
+			border-radius:15px;
+			padding:15px;
+		}
+		p{
+			font-size:16px;
+			text-indent:2em;
+			color:green;
+			text-align:2em;
+			margin-top:30px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h4>景龙等级查询</h4>
+		<input type="number" id="point" placeholder="请输入您的景龙">
+		<input type="button" value="景龙登记查询" onclick="checkpoints()">
+		<p>
+			陈景龙景龙景龙景龙景龙景龙景龙景龙
+		</p>
+	</section>
+	<script>
+		var point=document.getElementById('point');
+		function check(points){
+			var res='',revel=0;
+			if(points>=900){
+				level=1;
+			}else if(points<=900&&points>=500){
+				level=2;
+			}else{
+				level=3;
+			}
+			return level;
+		}
+		function checkpoints(){
+			alert('您的等级为：'+check(point.value));
+		}
+	</script>
+</body>
+</html>

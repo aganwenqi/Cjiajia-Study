@@ -1,0 +1,36 @@
+*{
+	margin:0;
+	padding:0;
+}
+body,html{
+	width:100%;
+	height:100%;
+	font:bold 24px 隶书;
+}
+header,footer{
+	background:rgba(30,10,10,0.6);
+	padding:15px;
+	text-align:center;
+	color:#fff;
+	line-height:2em;
+}
+section{
+	background:rgba(5,5,5,0.5);
+	flex-grow:1;
+	display:flex;
+	flex-flow:row;
+}
+article{
+	min-width:500px;
+	background:orange;
+	flex-grow:1;
+}
+nav,aside{
+	background:rgba(80,20,20,0.8);
+	width:180px;
+}
+body{
+	display:flex;
+	flex-flow:column;
+
+}

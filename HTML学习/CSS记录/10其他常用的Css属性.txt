@@ -1,0 +1,20 @@
+opacity:透明度设定
+它和rbga的区别就是,前者可以把子类的所有元素都设置，后者只设置自己
+
+鼠标的样式：
+cursor：
+hand手型，属性非常之多就不写出来了
+
+rem:根元素字体的大小，浏览器默认的字体大小是16px;
+
+轮廓outline
+ 轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可以起到突出元素的作用
+     outline-color 设置轮廓的颜色
+     outline-style 设置轮廓的样式
+     outline-width 设置轮廓的宽度
+     outline-offset 设置轮廓到边框的距离。注：css新增属性，不可以写道符合属性里
+
+display:none默认值
+inline不换行
+block转换成块元素
+inline-block可设置大小不可换行

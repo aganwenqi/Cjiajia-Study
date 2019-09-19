@@ -1,0 +1,21 @@
+内边距：
+padding-top:10px;内边距
+padding-right 右边内边距
+padding-bottom底部
+padding:10px 10px 10px 10px 顶 右 下 左
+设置两个时是上下、左右边距
+设置三个时是上、下、左右
+
+边框:
+border:3px solid red; 变宽、样式、颜色
+
+外边距：
+margin:它的属性和内边距一样
+
+溢出：
+overflow-y-visible默认值
+hidden裁切掉
+scroll裁剪，提供滚动条
+auto 自动，看是否要不要加入滚动条
+
+

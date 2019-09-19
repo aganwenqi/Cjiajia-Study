@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>哈撒给</title>
+	<style type="text/css">
+	div{
+		background:green;
+		width:150px;
+		height:150px;
+		position:relative;
+	}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<input type="button" id="btn1" value="myFunc1" onclick="alert('德玛夏亚')">
+	<input type="button" id="btn2" value="myFunc2">
+	<input type="button" id="btn3" value="myFunc3">
+	<script>
+		var div1=document.getElementById('div1');
+		var bt2=document.getElementById('btn2');
+		var bt3=document.getElementById('btn3');
+		function Myevent(){
+			div1.innerHTML='单击事件';
+		}
+		function Myevent1(){
+			div1.innerHTML='单击事件dd';
+			div1.style.background='red';
+		}
+		//DO
+		//DOM0事件
+		bt2.onclick=Myevent;
+		
+		//DOM2事件
+		//if(addEventLisener){//判断浏览器的兼容性
+	    if(bt3.addEventListener){
+			bt3.addEventListener('click',Myevent1);
+		}else{
+			bt3.attachEvenet('click',Myevent1);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ha</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="800" style="background:#A9A9A9">
+	   很抱歉，您的浏览器暂时不支持html5的canvas
+	</canvas>
+	<script>
+		var c=document.getElementById("canvas");
+		var ctx=c.getContext("2d");
+		ctx.fillStyle='red';
+		ctx.arc(100,100,100,0,Math.PI*2);
+		ctx.fill();
+		var imgData=ctx.getImageData(0,0,200,200);
+		ctx.putImageData(imgData,200,0) ;
+
+		//绘制图像
+		ctx.putImageData(imgData,400,0,0,0,100,100) ;
+
+		function fs(){
+			for(var i=0;i<imgData.data.length;i+=4){
+				imgData.data[i+0]=255-imgData.data[i+0];
+				imgData.data[i+1]=255-imgData.data[i+1];
+				imgData.data[i+2]=255-imgData.data[i+2];
+			}
+			ctx.putImageData(imgData,600,0,0,0,100,100) ;
+		}
+		fs();
+	</script>
+</body>
+</html>

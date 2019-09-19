@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script>
+	function time()
+	{
+	var today=new Date();
+	var hours=today.getHours();
+	var minutes=today.getMinutes();
+	var seconds=today.getSeconds();
+	var str="现在时间:";
+
+	if(hours<12){
+		str+='上午';
+	}else{
+		str+='下午'
+	}
+	str+=hours+'时'+minutes+'分'+seconds+'秒';
+    var clock=document.getElementById('clock');
+    clock.value=str;
+    }
+    var timeId=setInterval('time()',1000);
+	</script>
+	<input type="text" id="clock" size="50">
+	<input type="button" id="clock" size="50" onclick="clearInterval(timeId)" value="停止">
+</body>
+</html>
+
+

@@ -1,0 +1,25 @@
+@charset-"UTF-8";
+div{
+	width: 600px;
+	height: 800px;
+	padding: 40px;
+	font-size: 12px;
+	line-height: 25px;
+	border:20px ridge rgba(200,60,30,0.6);	
+   /* background-image:url("sc5.png");*/
+
+    background-image:url("sc16.png"),
+                     url("sc17.png"),
+                     url("sc5.png");
+
+    background-repeat:no-repeat,no-repeat,repeat; 
+    background-clip:border-box,border-box,content-box;
+    background-origin:border-box,border-box,content-box;
+    background-size:40%,25%,auto 100px; 
+    background-position:left top,right bottom;
+}
+p{
+	padding:0;
+	margin:0;
+	text-indent:20em;
+}

@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		input{
+			margin-top: 15px;
+			width:150px;
+			height:2em;
+		}
+	</style>
+</head>
+<body>
+<input type="button" value="open新窗口" onclick="openWin()"> <br>
+<input type="button" value="close新窗口" onclick="closeWin()"> <br>
+<input type="button" value="moveTo新窗口" onclick="moveWin1()"> <br>
+<input type="button" value="moveBy新窗口" onclick="moveWin2()"> <br>
+<input type="button" value="sizeBy新窗口" onclick="sizeWin1()"> <br>
+<input type="button" value="moveTo新窗口" onclick="sizeWin2()"> <br>
+	<script>
+	// 打开和关闭窗口练习
+	var newWindow;
+	function openWin(){
+		newWindow=window.open('','','top=150,left=150,width=300,height=300')
+	}
+	function closeWin(){
+			newWindow.close()
+	}
+	function moveWin1(){
+			newWindow.moveTo(300,300)
+			newWindow.focus() 
+	}
+	function moveWin2(){
+			newWindow.moveBy(30,30)
+			newWindow.focus() 
+	}
+	function sizeWin1(){
+			newWindow.resizeBy(30,30)
+			newWindow.focus() 
+	}
+	function sizeWin2(){
+			newWindow.resizeTo(30,30)
+			newWindow.focus() 
+	}
+	</script>
+</body>
+</html>
+
+

@@ -1,0 +1,18 @@
+div{
+	width:300px;
+	height:100px;
+	margin:50px;
+	padding:50px;
+	border:5px groove rgba(200,69,30,0.8);
+}
+#div1{
+background-image:linear-gradient(red 20%,blue 100%);
+}
+#div2{
+	/*重复渐变*/
+	background-image:repeating-linear-gradient(red 20%,blue 30%);
+}
+#div3{
+	/*径向渐变：*/
+	background-image:repeating-radial-gradient(red 20%,blue 30%);
+}

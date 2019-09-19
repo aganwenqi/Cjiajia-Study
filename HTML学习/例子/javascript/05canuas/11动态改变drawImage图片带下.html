@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ha</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="800" style="background:#A9A9A9">
+	   很抱歉，您的浏览器暂时不支持html5的canvas
+	</canvas>
+	<input id="inps" type="range" value="1" max="30" min="3">
+	<script>
+		var c=document.getElementById("canvas");
+		var scaler=document.getElementById("inps");
+		var ctx=c.getContext("2d");
+		var img=new Image();
+			img.src="a.gif";
+			function draw(scale){
+				var w=c.width;
+					h=c.height;
+					sw=w*scale;
+					sh=h*scale;
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+				ctx.drawImage(img,-sw/2+w/2,-sh/2+h/2,sw,sh);
+			}
+		img.onload=function(){
+				draw(0.3);
+		}
+		scaler.onchange=function(e){
+			scale=e.target.value/10;
+			draw(scale);
+		}
+	</script>
+</body>
+</html>

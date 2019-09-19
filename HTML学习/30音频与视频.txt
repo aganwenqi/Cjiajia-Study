@@ -1,0 +1,36 @@
+30
+video:支持ogg,mpeg4,webm
+src是视频的路径
+controls设置了该属性就可以有播放的模块
+poster该属性设置视频播放前显示的内容
+autoplay自动播放
+loop循环播放
+preload设置视频预加载等
+<source src="F:/HTML学习/材料/01.mp4" type="video/mp4">该属性在video里面使用，如果设置了这个路径那么src就不可以设置了，后面的type设置是设置视频格式
+
+audio这个元素一般用来播放MP3
+embed设置嵌入对象
+obeject也是嵌入对象，它可以包含很多种格式的文件
+
+javascript
+
+ paused 该属性播放状态返回true,暂停状态返回false
+play()播放
+pause()暂停
+load()加载视频
+canPlayType(类型)测试浏览器是否支持该类音频或视频文件
+ 返回属性：prbably浏览器可能支持
+           maybe 也许支持
+           “”不支持
+
+currentSrc 返回当前视频的地址
+currentTime 设置或返回当前视频播放的位置，返回秒数浮点数
+defaultMuted 设置或返回页面是否静音
+volume 设置或返回音量， 他的值在0~1之间
+playbackRate 设置当前视频的播放速度 要load()加载下才能有效果
+controls 控制控件显示或隐藏，true显示
+defaultPlaybackRate 设置或返回视频的默认播放速度
+duration 返回当前视频的长度，单位是秒
+
+事件：
+ontimeupdate 视频播放时一直调用的事件，不能直接复制，要添加监听timeupdate

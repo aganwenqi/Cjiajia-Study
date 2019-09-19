@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>12</title>
+</head>
+<body>
+	<audio src="F:/HTML学习/材料/月光.mp3" controls="controls"></audio><br>
+	<video src="" id="video" controls="controls" widht="300"></video>
+	<button onclick="play()">播放/暂停</button>
+	<button onclick="big()">放大</button>
+	<button onclick="small()">缩小</button>
+	<button onclick="load()">记载</button>
+	<script>
+	var v=document.getElementById("video");
+		function play(){
+
+			if(v.paused){
+				v.play();
+			}else{
+				v.pause();
+			}
+
+		}
+		function big(){
+
+			if(v.width<800){
+				v.width+=20;
+			}else{
+				v.width=800;
+			}
+		}
+		function small(){
+			if(v.width<150){
+				v.width=150;
+			}else{
+				v.width-=20;
+			}
+		}
+
+		//加载视频
+		function load(){
+			v.load();
+			v.src="F:/HTML学习/材料/01.mp4";
+		}
+		// //测试浏览器的兼容性
+		// function supportType( vidType){
+			
+		// }
+	</script>
+</body>
+</html>

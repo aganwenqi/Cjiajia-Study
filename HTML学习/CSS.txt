@@ -1,0 +1,1 @@
+input:focus{padding:8px;}被设置为focus的获取焦点后样式会跟着改变

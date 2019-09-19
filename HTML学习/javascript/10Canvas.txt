@@ -1,0 +1,22 @@
+drawImage(img,sx,sy,swidth,sheight,x,y,width,height)向画布绘制图像、画布或视频
+img 规定内容
+sx，sy 开始剪切坐标
+swidth,sheight 被剪切图像的大小
+x,y 画布放置图像的坐标
+width,height 图像的大小
+
+像素：
+var idate=getImageData(x,y,witdh,height)获取该区域的所有的像素数据
+   idate.width 获取行的像素
+   idate.date 整个像素区域的像素数据，它是一个数组，该属性包含了每个像素的   rgba值，这里的透明度255是完全不透明
+
+复制
+putImageData(对象,x,y)将获取的数据复制一份放置在另外一个地方
+putImageData(对象,x,y，width,height) x,y为起点，width,height为矩形的大小
+putImageData(imgData,400,0,0,0,100,100)
+2和3表示坐标，后面四个参数表示大小
+
+创建
+createImageData(x,y)创建一个空白区域
+
+C.toDataURL();获取该画布的数据

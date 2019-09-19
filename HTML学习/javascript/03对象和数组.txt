@@ -1,0 +1,32 @@
+var people=new Object();
+people.age=1;
+
+delete people.age;删除该属性
+function say(){}
+people.sa=say;带方法
+
+数组
+new Array();
+var p=[]
+new Array(1,2,3,3,4,4);
+new Array(4);赋值多少个元素
+数组名.lenght=4;设置数组长度
+p.push(1);尾部添加元素，可以同时添加多个元素，返回数组长度
+p.unshift(1)首部添加元素，返回数组长度
+delete p[2]删除指定元素
+p.pop()删除最后一个元素，也返回该元素
+p.shift删除顶端的元素
+p.join('22')返回该数组，每个元素之间都会有 “22”
+p.reverse();把数组颠倒过来
+p.sort(数值)数组排序
+
+sortfunction(参数1，参数2);第一个大于第二个返回正，否则负，零相等
+p.sort(sortfunction);根据上面的函数内容来确定排序
+
+p.concat(p1)合并元素，返回合并后的值
+p.splice(1,0,'1','11');第一个参数是下标，第二个是选择多少个元素，第三个后面是要插入的参数
+
+元素的截取
+slice(0,-1)除了最后一个元素以外返回所有元素，第一个为开始，第二个为结束
+
+for(sh in as)sh返回每个数组的下标，依次返回

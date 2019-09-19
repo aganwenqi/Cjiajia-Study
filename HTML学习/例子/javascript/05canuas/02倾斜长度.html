@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>ff</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="300" style="background:#A9A9A9">
+		很抱歉，您的浏览器暂不支持HTML5的canvas
+	</canvas>
+	<canvas id="canvas1" width="500" height="300" style="background:#A9A9A9">
+		很抱歉，您的浏览器暂不支持HTML5的canvas
+	</canvas>
+	<script>
+	//线帽(结束端点)
+		 var canvas=document.getElementById('canvas');
+		 var cxt=canvas.getContext('2d');
+		 cxt.lineWidth=15;
+		 cxt.lineJoin="miter";
+		 cxt.miterLimit=4;
+		 cxt.moveTo(20,20);
+		 cxt.lineTo(150,50);
+		 cxt.lineTo(20,80);
+		 cxt.stroke();
+	</script>
+
+</body>
+</html>

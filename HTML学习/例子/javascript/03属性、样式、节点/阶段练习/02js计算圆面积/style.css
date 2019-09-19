@@ -1,0 +1,30 @@
+*{
+	margin:0;
+	padding:0;
+}
+div{
+	margin:70px auto;
+	padding:20px;
+	width:400px;
+	height:280px;
+	background:yellow;
+	text-align:center;
+ 
+}
+input{
+	margin:10px 10px;
+	padding:5px;
+}
+h3{
+	font-size:50px;
+}
+
+label{
+	font-size:20px ;
+	font-weight:bold;
+}
+#js,#cl{
+	padding:20px;
+	font-size:20px ;
+	font-weight:bold;
+}

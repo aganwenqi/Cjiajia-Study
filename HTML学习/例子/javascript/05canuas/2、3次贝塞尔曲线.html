@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>ff</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="1000" height="300" style="background:#A9A9A9">
+		很抱歉，您的浏览器暂不支持HTML5的canvas
+	</canvas>
+	<canvas id="canvas1" width="500" height="300" style="background:#A9A9A9">
+		很抱歉，您的浏览器暂不支持HTML5的canvas
+	</canvas>
+	<script>
+	//二次方贝塞尔曲线
+		 var canvas=document.getElementById('canvas');
+		 var cxt=canvas.getContext('2d');
+		 cxt.lineWidth=3;
+		 cxt.fillStyle="orange";
+		 cxt.strokeStyle="green";
+		 cxt.beginPath();
+		 cxt.moveTo(50,50);
+		 cxt.quadraticCurveTo(150,200,300,50);
+		 cxt.stroke();
+
+		 cxt.beginPath();
+		 cxt.lineWidth=3;
+		 cxt.moveTo(150,50);
+		 cxt.bezierCurveTo(200,200,600,200,700,50);
+		 cxt.stroke();
+	</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+31
+canvas定义一块画布
+<script type="text/javascript">
+	
+</script>
+var定义一个变量
+
+绘图：
+Math.PI这个表示180°
+document.getElementById("canvas")获取括号里的id元素
+元素.getContext('2d')设置绘图环境
+moveTo(x,y)设置起点坐标
+lineTo(x,y)下一个点的坐标
+lineWidth=? 设置线宽
+strokeStyle="?" 设置颜色值，渐变
+fillStyle="?" 填充色
+stroke()；开始绘画，这个绘制空心，fill();这个绘制实心
+
+beginPath();开始绘制新的图形
+closePath();从当前点画到起始点
+
+rect(x,y,w,h)创建矩形
+strokeRect(x,y,w,hx,y,w,h)绘制矩形
+fillRect(x,y,w,h)绘制被填充的矩形，fillStyle=""设置填充颜色
+arc(x,y,r，0,pi)坐标，半径，开始角度结束角度，绘制方向（boolean）（圆）
+
+清楚区域：
+clearRect(x,y,x,y);清楚指定位置的函数
+
+文字绘制
+strokeText("文字"，x,y,maxWith);绘制描边空心文字
+fillText("文字"，x,y,maxWith);绘制实心文字
+字体样式：font=“大小 字体。。。”
+measureText(文本).width;测试文本的宽度
+
+水平对齐
+textAlign="start"设置和返回文本的对齐方式:end,center,left,right
+
+竖直方向对其
+textBaseline="top" 属性有：top,bottom,middle(em方框的正中)
+alphabetic默认，文本基线是普通的字母基线
+ideographic 跟默认有一定的相似，一般用于中文
+hanging 悬挂，
+
+34阴影
+c.shadowOffsetX=8;//阴影坐标
+c.shadowOffsetY=8;//阴影坐标
+c.shadowBlur=8;//阴影模糊系数
+c.shadowColor="green";//阴影颜色
+
+透明度：
+globalAlpha=0.4;   1表示满透明度
+
+裁剪、覆盖等
+globalCompositeOperation="属性"
+
+线性：
+对象=createLinearGradient(0,0,width,height）范围
+对象.addColorStop(0,'blue');
+对象.addColorStop(0.5,'red');
+
+填充元素
+createPattern(元素,'重复方向');创建一个元素填充，该属性要元素先加载完才可以填充
+端点样式：
+c.lineCap="butt" 设置线端点的样式
+butt默认
+square圆角
+round增加矩形端点
+
+拐角样式
+c.lineJoin="miter"默认尖角
+bevel 创建斜角
+round 创建圆角
+
+斜接长度
+cxt.miterLimit=4;就是三角形一个角，当斜接的长度达到规定值时就会剪切
+掉变成斜角
+
+切线画圆弧
+cxt.moveTo(200,300);开始点
+cxt.arcTo(200,100,400,100,100);第1、2个参数是第一个点位置
+3、4是第二个点位置，最后的参数是圆弧的半径
+
+二次贝塞尔曲线
+该曲线三点构成：起始点，结束点，控制点
+quadraticCurveTo(cx,xy,x,y)分别为控制点和结束点
+
+三次次贝塞尔曲线
+该曲线三点构成：起始点，结束点，两个控制点
+bezierCurveTo(400,150,600,200,700,50);第一个控制点，第二个控制点，结束点
+
+裁剪区域
+cxt.clip();以后的路径都会被裁剪掉并隐藏		 
+		 
+isPointInPath();判断当前点是否在路径中
+
+状态的保存和恢复
+save()保存当前样式状态
+restore()恢复当前样式状态，这两个状态的先后顺序跟坐电梯一样
+
+坐标系列
+translate(x,y)移动绘图画笔的坐标
+scale(x,y);缩放
+rotate();旋转

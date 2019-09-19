@@ -1,0 +1,121 @@
+http://www.runoob.com/
+<!DOCTYPE html>    --表示HTML5的格式
+<html lang="zn-cn">  --设置语言形式
+<html>    --所有HTML都必须有的开头
+ <head>   --标题栏
+  <meta charset="UTF-8">  --表示格式，没有它浏览器识别不了中文
+  <meta http-equiv="refresh" contenet="3;http://www.baidu.com">
+   打开过了3秒自动跳转到相应网页
+  <title>德玛西亚</title>
+ </head>
+ <body>   --内容
+ 手机发送的就
+ </body>
+</html>
+
+
+tab 
+Ctrl+? 注释操作
+<br>强制换行，它不需要</br>结尾
+<wbr>安全换行
+../表示路径的上一级
+以下看例子2
+<h1> 该标签表示标题，字体会变大，当然有h1~h6
+<p>这个标签标识一个段落
+<hr>我是分割线，它不需要</hr>结尾
+margin-top,margin-left这两个属性分别设置该快在浏览器中显示的位置
+
+通用属性
+id="名称"属性，一个文件只允许出现一次
+class=""名称"该属性是设置一个类型
+dir="rtl"设置文字从哪里出现
+<bdo dir="rtl">如果在这个元素里设置那么是设置字体走向
+
+以下看例子3
+属性的使用
+<标签 属性="属性值">
+align属性，该属性是对齐，有几个值，left,right,center
+bgcolor给文档添加一个背景颜色，属性值填写颜色的英文名称,当然可以用ps里的#2566的类型
+font-size:300px它表示设置字体的大小
+
+以下看例子4
+文本元素
+<b>,<strong>加粗元素
+<i>,<em>倾斜元素
+<del>,<s>在文字中间加一横线
+<u>加下划线
+<u>下划线
+<ins>下划线
+<small>
+<sub>下标
+<sup>指数幂
+<dfn>对一个词活短语的解释，效果跟斜体差不多
+<q>双引号
+<pre>保留里面所有格式
+
+var定义一个变量
+samp显示比如：你没有权限
+kbd表示某部分的内容让用户输入
+
+ruby给字体加上拼音<ruby>龙<rt>long</rt></ruby>
+
+以下看例子5
+超链接
+<a href="http://www.baidu.com">百度</a>文字超链接
+<a href="I:\HTML学习\例子\2.html">本地连接</a>
+<a href="http://www.baidu.com"><img src="E:\美术\自制表情包\猥琐.gif">图片超链接
+<a href="E:\美术\自制表情包\猥琐.gif">下载</a><br>下载，浏览器遇到不可解析的就会自动下载
+
+打开超链接模式5
+<a href="http://www.baidu.com" target="_self">打开百度</a><br>当前打开
+<a href="http://www.baidu.com" target="_blank">打开百度</a><br>新窗口打开
+锚点链接
+<a href="#1">锚点1</a>    #1  就跳转到下面锚点1
+<a id="1">锚点1
+
+img元素嵌入图片6
+<img src="E:\美术\自制表情包\帅.jpg" alt="搞笑" width="300" height="500" title="标签属性">
+<!-- src制定图片来源路,alt为图片无法打开的时候显示的文字,宽高可以用百分比，比如：width="%50"-->
+
+列表7
+<ul type="">属性disc默认，circle空心,square实心方块 
+ style="list-style-type:none"表示列表没有开头的点
+无序列表<li>列表1</li>
+</ul>
+
+<ol type="A">表示从A开始，
+	<li>有序列表</li>
+</ol>
+
+<ol start="8">表示从8开始
+	<li>有序列表</li>
+	<li value="5">有序列表</li>value定义后后面也会发生变化
+</ol>
+
+<dl>
+	<dt>自定义列表</dt>
+	<dd>列表项目1的内容说明</dd>
+</dl>
+
+表格8
+
+style元素与HTML样式基础9
+<style type="text/css">内部样式
+   p{color:red} 这里面写每种类型的样式
+   #sh{}这里的sh是指定了ID的元素的名称
+   .class{}设置一种类型的所有样式
+</style><!-- 引用CSS样式,这种引用会把所有P的样式都设置为红色 -->
+
+iframe内联框架10
+1.iframe袁术用来在文档中添加一个内联框架。
+2.iframe为body元素的子元素,必须防止在boay中使用
+3.主要属性:src;name/id;width;height
+4.对HTML5中已经删除的属性不再进行讲解
+<iframe src="http://www.baidu.com" name="myframe"></iframe><!-- src默认添加一个内容，比如百度网站的框架，name名字是框架的引用，其他地方想使用这个框架可以使用target="name"-->
+
+布局11
+布局其实就是表格坐下手脚
+
+div元素12
+<div style="这里可以设置颜色宽度等等" float:left></div>div会自动换行，可嵌套
+float属性指定从哪边开始排列，clear:left倾斜度

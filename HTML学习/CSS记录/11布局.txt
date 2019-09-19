@@ -1,0 +1,65 @@
+流试浮动布局：
+float:left;
+
+CSS3新增的宽高包括边框属性
+box-sizing:
+content-box默认属性是宽高不包括边框
+border-box包括边框和内边距
+
+定位布局
+把父元素设置为相对定位那么它的子元素的绝对定位就会是它的上个父元素
+position:relative;相对定位
+
+position:absolute;绝对定位
+
+多列布局：该布局需要用到前缀-webkit-
+columns:column-width colunmn-count设置列宽和列的个数，当然也可以当都设置
+column-rule设置所有column-rule-*属性的简写属性
+  column-rule-width规定列之间规则的宽度
+  column-rule-style规定列之间的样式
+  column-rule-color规定列之间规则的颜色
+column-span规定元素应该横跨的列数，默认为1，还有all
+column-gap规定列之间的间隔
+column-fill规定如何填充列
+
+弹性布局：
+display:flex设置为弹性盒子
+inline-flex将对象作为内联块级弹性伸缩盒显示
+
+flex-direction:row纵向排列
+row-reverse纵向镜像排列
+column的话是横向
+
+flex-wrap(适用于父类容器上)设置或检索伸缩盒对象的子元素超出父容器时是否换行
+nowrap默认值就是不换行，会缩小挤进去
+wrap溢出父容器时自动换行
+wrap-reverse反过来排列
+  flex-flow:row wrap复合属性
+
+justify-content:flex-start从开始的地方对齐,横向排列
+flex-end从结束的地方对齐
+flex-center从中间对齐
+space-between;从开始到结尾分散布局
+space-around从开始到结尾分散布局,左右两边会流出一些空白
+
+（Y轴）
+align-items:flex-start纵向排列，这个属性会在顶部
+flex-end会在底部
+baseline沿着基线对齐
+stretch默认样式，会填充满高
+
+align-self相对于子元素，它的属性和上面的align-items属性相同
+
+（Y轴）
+align-content:flex-start;清楚多余空白从开头开始排列
+align-content:center;中间
+space-between从开始到结尾分散布局
+space-around从开始到结尾分散布局,左右两边会流出一些空白
+stretch默认
+
+order:设置排列顺序，值越小排的位置越前
+
+flex-grow:1;设置子元素在父元素的平均分配，值越大分配越多
+flex-shrink:该元素是收缩的，效果跟上面这种相反
+flex-basis:该属性是用值来确定所占的空间，可用百分比
+

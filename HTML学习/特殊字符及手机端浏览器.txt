@@ -1,0 +1,8 @@
+综合实例1
+name="viewport"屏幕设定
+maximum-scale=1.0,minimum-scale=1.0;initial-scale=1.0;做大最小缩放比例为1；其实就是不允许点击缩放
+user-scalable=0,width=device-width;设定内容和设备的屏幕等宽，等高
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+
+body{margin:0px}设置外边距为0
+overflow:auto超出内容时自动添加滚动条

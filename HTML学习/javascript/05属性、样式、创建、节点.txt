@@ -1,0 +1,65 @@
+id:
+getElementById(id);获取该id对象
+对象.innerHTML  返回元素内容
+
+name:这个返回时数组形式对象
+getElementsName(name);
+对象.innerHTML  返回元素个数
+对象[下标].value访问哪个元素的属性值
+
+TagName:指的是元素的名称,返回也是数组
+getElementsByTagName(元素);
+
+getElementsByClassName("bb");指的是元素的类型，返回也是数组
+
+返回和设置元素内容
+对象.innerHTML 返回元素内容,也可以直接修改，可以是有标签在里面 对象.innerHTML='';
+对象.tagName 返回元素的标签名
+对象.nodeName 返回元素的标签名
+对象.className 返回class值，其他元素不需要加Name
+
+改变样式：
+对象.style.样式=''设置样式
+设置比如：text-algin这种属性值需要这样写：textAlgin
+
+同时改变多个属性
+.dl{
+  样式属性
+}
+对象.className='dl d2' 这样多个属性就更改成功，当然是可以邮寄个class
+
+
+
+创建及删除：
+docment.createElement('元素');创建一个额元素
+容器.appendChild(元素);向容器中添加元素
+容器.removeChild(元素);删除
+容器.insertBefore(元素,容器.children[2]);这种可以任意插入到别的地方
+
+替换：
+容器.replaceChild(元素,容器.children[2]);替换
+
+节点：
+对象.nodeType 元素节点返回1，属性节点返回2，文本节点返回3
+对象.nodeName 返回元素类型，比如：#text
+对象.nodeValue元素没有该值，只有属性和文本才会返回
+对象.parentNode 返回父节点对象
+对象.childNodes 返回是一个数字组，包含所有的子节点
+
+对象.children 返回一个数组，只返回元素节点
+
+
+子节点：
+对象.firstChild和firstElementChild返回元素的首个子元素
+前者考虑空格，后者只返回元素节点
+对象lastChild最后
+
+同级节点：
+对象.element.previousSibling    preveiousElementSibling前一个节点
+nextSibling nextElementSibling后一个节点
+
+属性节点
+对象.getAttribute('属性');获取属性值
+对象.setAttribute('属性','属性值');设置获取属性值
+对象.removeAttribute();从元素中移除某个属性
+对象.attributes 获取所有的属性

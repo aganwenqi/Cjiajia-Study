@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script>
+	function cicle(){
+		var radius=prompt('请输入圆的半径',0);
+		radius=parseFloat(radius);
+		var s=Math.PI*radius*radius;
+		alert('圆的面积:'+s);
+		var co=confirm('您对这个计算满意吗');
+
+		if(co){
+			alert('感谢您的评价');
+		}else{
+			alert('哈撒给');
+		}
+	}
+	</script>
+	<input type="button" id="cic" value="计算圆形的面积" onclick="cicle()">
+</body>
+</html>
+
+

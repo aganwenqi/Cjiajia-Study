@@ -1,0 +1,24 @@
+div{
+	width:300px;
+	height:100px;
+	margin:150px;
+	padding:50px;
+	border:5px groove rgba(200,69,30,0.8);
+	background:green;
+}
+#div1:hover{
+	transform:translate(100px,100px);/*移动*/
+}
+#div2:hover{
+	transform:scale(0.5);/*缩放*/
+}
+#div3:hover{
+	transform:rotate(45deg);
+}
+#div4:hover{
+	transform:skew(30deg);
+}
+#div5:hover{
+	transform:skew(30deg);
+	transform-origin: left top;
+}

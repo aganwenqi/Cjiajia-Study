@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zn-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>图片</title>
+</head>
+<body>
+	<table border="5"><!-- 表格属性 -->
+	<tfoot><td>备注：</td><td></td></tfoot>
+	表格
+	<thead style="red"><tr><th colspan="3">标题</th></tr></thead>
+	<!--colspan横向 合并单元格，rowspan纵向合并，数字表示合并多少-->
+	<tbody>	<tr><td>单元格</td><td>单元格</td></tr><!-- 单行单列 -->
+	<tr><td>单元格</td><td>单元格</td></tr><!-- 单行单列 -->
+	<tr><td>单元格</td><td>单元格</td></tr><!-- 单行单列 -->
+	</tbody><!-- thead表示标题，tbody表示内容，tfoot是最下面的，有了这些那么位置都会固定放相应位置,style背景色 -->
+
+	</table>
+	<table border="5"><!-- 表格属性 -->
+	<colgroup span="1" style="width:100px">
+	<col style="background:red">
+	<!-- 设置这列的背景颜色 -->
+	</colgroup>
+	<colgroup span="1" style="width:200px"></colgroup>
+	<!-- 设置多少列的每一列的宽度 -->
+	<tr><th colspan="3" style="background: yellow">标题</th></tr>
+	<tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+	<tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+	</table>
+</body>
+</html>

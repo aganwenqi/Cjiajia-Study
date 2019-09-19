@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<style type="text/css">
+		div{
+			margin:15px auto;
+			background:orange;
+			width:200px;
+			height:200px;
+			padding:15px;
+			border-radius:200px;
+			position:absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+	<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+	<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+	<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+	<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+	<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+	<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+	<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+	<script>
+	
+	function myfun1(e){
+		var num=30;
+		var divs=document.getElementsByTagName('div');
+		var body=document.getElementsByTagName('body')[0];
+		for(var i=0;i<num;i++){
+
+			var rad=Math.floor(Math.random()*10)+'px';
+			divs[i]=document.createElement('div');
+			divs[i].style.background='rgb('+4*i+','+2*i+','+i+')';
+			divs[i].style.width=divs[i].style.height=rad;
+			// divs[i].style.position='absolute';
+			divs[0].style.left=e.clientX+'px';
+			divs[0].style.top=e.clientY+'px';
+			divs[i].style.left=e.clientX+Math.floor(Math.random()*10*i)+'px';
+			divs[i].style.top=e.clientY+Math.floor(Math.random()*10*i)+'px';
+			body.appendChild(divs[i]);
+		}
+	}
+	document.onmousemove=myfun1;
+	</script>
+</body>
+</html>

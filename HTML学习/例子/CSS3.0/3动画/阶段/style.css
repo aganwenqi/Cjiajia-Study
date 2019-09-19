@@ -1,0 +1,25 @@
+ul{
+	list-style:none;/*去除小圆点*/
+	font-size:24px;
+	font-weight: bold;
+}
+a{
+	text-decoration:none;
+}
+li{
+	background-image:linear-gradient(to right,red,yellow);
+	width:150px;
+	margin:10px 10px;
+	border-radius:5px;
+};
+#ul1 li{
+	float:left;
+}
+li:hover{
+	background-image:linear-gradient(to left,red,yellow);
+	transform:rotate(15deg);
+	transform-origin:0 0;
+}
+hr{
+	border:3px dotted green;
+}

@@ -1,0 +1,40 @@
+ul{
+	list-style:none;/*去除小圆点*/
+	font-size:24px;
+	font-weight: bold;
+	padding-left:50px;
+}
+img{
+	width:100px;
+	height:150px;
+	border:3px groove orange;
+}
+li{
+	float:left;
+	transform-origin:left top;
+	transform:rotate(10deg);
+	transition:all 1s ease;
+}
+li:nth-child(2n){
+	transform:translate(0,100px) rotate(20deg);
+}
+li:nth-child(3n){
+	transform:translate(0px,300px) rotate(-30deg);
+}
+li:nth-child(4n){
+	transform:rotate(-10deg) translate(40px,200px);
+}
+li:hover{
+	transform:rotate(0deg) scale(3);
+	position:relative;
+	z-index:200;
+}
+div{
+	width:800px;
+	height:600px;
+	background:rgba(0,0,0,0.2) url("E:/美术/斗地主美术/初音啦/主界面美术/Zhuye.png") no-repeat;
+	/*background-origin:padding-box;*/
+	background-size:100% 100%;
+	padding:30px;
+	margin:auto auto;
+}

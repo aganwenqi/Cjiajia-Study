@@ -1,0 +1,39 @@
+鼠标事件：
+onclick 鼠标单击事件
+ondblclick 鼠标双击左键事件
+onmousedown 鼠标被按下
+mouseout 鼠标从某元素移除
+mousemove 鼠标被移动
+mouseover 鼠标移动到某个元素上
+onmouseup 鼠标被松开后
+contextmenu 点击鼠标右键
+
+键盘事件：
+onkeydown 按下某个键
+onkeyup 某个键被松开
+onkeyprss 某个按钮按下并松开,区分大小写
+
+其他事件：
+window.onload=function(){代码}页面加载完执行这些代码
+window.onunload  退出页面的时候调用
+window.location.reload();刷新窗口
+
+function myFun1(){
+   alert(event.type);//获取事件的类型
+   alert(myFun1.arguments.length);//获取事件的多少
+   event.target获取事件目标
+}
+
+键盘返回值
+event.keyCode 返回键盘对应的unicode值，该值在火狐中无效
+event.which
+
+event.button 返回值0，1，2对应鼠标三个键
+
+事件的冒泡和捕获就是相反的：要实现只需要添加事件时设置第三个参数
+1为捕获，0为冒泡
+stopPropagation(); 阻止冒泡行为
+preventDefault();阻止事件的默认行为
+	
+document.doumentElement.scrollTop||document.body.scrollTop
+获取鼠标在滚动窗口中距离顶部的坐标

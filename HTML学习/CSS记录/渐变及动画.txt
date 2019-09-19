@@ -1,0 +1,76 @@
+渐变色32
+createLinearGradient(x1,y1,x3,y2)颜色渐变的起始坐标和终点
+addColorStop(位置,"颜色值“）0表示起点...插入点...1表示终点，配置颜色停止点
+createRadialGradient(x1,y1mr1,x2,y2,r2)创建放射状/环形的渐变
+放射性渐变
+createRadialGradient(x1,y1,r1,x3,y2,r2,)创建放射状/环形的渐变（圆）
+
+
+css:渐变
+background-image:linear-gradient(颜色，颜色)实现两种颜色渐变
+   (to right,颜色，颜色)自左像右
+   (0deg,颜色，颜色)按找角度来，0度是默认值
+   (颜色 20%，颜色 100%)设置占据百分之多少，当然也可以用像素来设置
+
+重复渐变：repeating-linear-gradient(颜色，颜色)
+
+径向渐变：
+radial-gradient(circle,颜色。颜色)圆心散开的渐变，上面有的属性它也有
+可设置渐变形状
+  (circle at right,颜色。颜色)设置发散方向
+
+动画：
+2d变形:transform:translate(x,y);移动
+  rotate(45deg)旋转
+  scale()缩放
+  skew(30deg)倾斜；
+  matrix(n,n,n,n,n,n)矩阵，缩放，倾斜，倾斜，缩放，移动，移动
+改变变形基准点：
+  transform-origin: left top;
+
+过渡动画:
+transition简写属性，用于在一个属性中设置四个过渡属性
+ transition-property规定应用过渡的CSS属性的名称
+   none没有属性会获得过渡效果
+   all所有属性获得
+   属性名称（指定属性）
+transition-duration定义过渡效果花费的时间，默认为0，单位秒
+transition-timing-function:ease规定过渡效果的时间曲线
+  ease为默认值，慢到快
+  cubic-bezier(n,n,n,n)贝塞尔曲线自定义时间的快慢
+transition-delay延时启动
+  
+动画效果：关键帧
+@keyframes myname //设置动画规则,myname是动画名称，通常用animatrion-name：引用
+{
+  from{
+       margin-left:50px;//变化之前的效果
+       background:green;
+       }
+   to
+     {
+       margin-left:350px;//变化之后的效果
+       background:blue;
+      }
+}
+@keyframes myname同百分比设置动画规则 
+{
+   0%{
+      }
+    100%{}
+}
+
+animation-name:属性为@keyframes动画规则名称，none表示覆盖已有的动画
+animation-duration规定动画完成一个周期所花费的时间,默认是0
+animation-delay规定打开后动画什么时候开始执行
+animation-iteration-count:3;设置播放多少次，infinite无限循环
+animation-direction:alternate;该属性在动画执行完后它会按照原路返回
+animation-plau-state:running规定正在播放，paused规定动画暂停，配合javascript
+animation-fill-mode规定对象动画时间之外的状态
+   forwards动画完成后,保持最后一个属性值，保留在最后一帧
+   backwards在animation-delaya所指定的一段时间内，停留在第一帧上
+   both同时应用上面两种属性
+简写属性：
+animation:myname 2s ease 0s 2 altreante;
+动画名称，周期话费时间，设置速度模式，刚开始停顿时间，循环执行，设置原路返回
+视距：perspective:500px;

@@ -1,0 +1,19 @@
+新布局头和尾13
+<header>我是头部</header>
+<footer>我是底部</footer>
+
+文章<article>，<section>主体14
+<article>他里面什么内容都可以添加，它相当于一个块，一般运用文章
+div强调在形式上的独立性，section强调的是内容上的独立性
+
+aside元素：左侧框 15
+
+16导航栏及时间
+nav导航条
+time发布日期<time datetime="2015-10-22">2015年10月22日</time>
+
+一些格式的框17
+hgroup这个标签是标题的框
+address标签里面放置电话号码，邮箱，联系方式，版权信息等
+figure媒体组合元素，比如图像图表等
+figcaption用来给媒体（figure）定义标题

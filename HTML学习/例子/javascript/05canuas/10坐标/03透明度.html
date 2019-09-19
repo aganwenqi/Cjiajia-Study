@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ha</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="1200" height="1200" style="background:#A9A9A9">
+	   很抱歉，您的浏览器暂时不支持html5的canvas
+	</canvas>
+	<script>
+		var c=document.getElementById("canvas");
+		var ctx=c.getContext("2d");
+		ctx.strokeStyle="red";
+	    ctx.fillRect(100,100,100,100);
+	    ctx.fillText("dsfdsfds",200,150);
+
+	    ctx.globalAlpha=0.4;
+	    ctx.beginPath();
+	    ctx.fillStyle="orange";
+	    ctx.fillRect(150,150,100,100);
+	</script>
+</body>
+</html>
