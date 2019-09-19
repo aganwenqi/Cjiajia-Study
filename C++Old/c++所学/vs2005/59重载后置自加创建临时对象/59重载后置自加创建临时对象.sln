@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "59重载后置自加创建临时对象", "59重载后置自加创建临时对象\59重载后置自加创建临时对象.vcproj", "{9C73A524-CF3E-4111-AE3A-D5612D7C9061}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C73A524-CF3E-4111-AE3A-D5612D7C9061}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9C73A524-CF3E-4111-AE3A-D5612D7C9061}.Debug|Win32.Build.0 = Debug|Win32
+		{9C73A524-CF3E-4111-AE3A-D5612D7C9061}.Release|Win32.ActiveCfg = Release|Win32
+		{9C73A524-CF3E-4111-AE3A-D5612D7C9061}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "36while的无限循环", "36while的无限循环\36while的无限循环.vcproj", "{44A07955-469D-43F2-8202-D2A4833F338C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44A07955-469D-43F2-8202-D2A4833F338C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{44A07955-469D-43F2-8202-D2A4833F338C}.Debug|Win32.Build.0 = Debug|Win32
+		{44A07955-469D-43F2-8202-D2A4833F338C}.Release|Win32.ActiveCfg = Release|Win32
+		{44A07955-469D-43F2-8202-D2A4833F338C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

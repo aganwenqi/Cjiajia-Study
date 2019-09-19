@@ -1,0 +1,4 @@
+﻿  图书系统.cpp
+i:\c++old\c++所学\类中成员\200》》终结《《002\200》》终结《《002\gan.h(60): warning C4267: “=”: 从“size_t”转换到“unsigned short”，可能丢失数据
+图书系统.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+  200》》终结《《002.vcxproj -> I:\C++Old\c++所学\类中成员\200》》终结《《002\Debug\200》》终结《《002.exe

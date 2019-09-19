@@ -1,0 +1,12 @@
+﻿  1.cpp
+i:\c++old\c++所学\vs2005\爱心1\爱心1\1.cpp(31): warning C4244: “参数”: 从“float”转换到“std::streamsize”，可能丢失数据
+i:\c++old\c++所学\vs2005\爱心1\爱心1\1.cpp(33): warning C4244: “参数”: 从“float”转换到“std::streamsize”，可能丢失数据
+i:\c++old\c++所学\vs2005\爱心1\爱心1\1.cpp(42): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+i:\c++old\c++所学\vs2005\爱心1\爱心1\1.cpp(43): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+i:\c++old\c++所学\vs2005\爱心1\爱心1\1.cpp(44): warning C4244: “参数”: 从“float”转换到“std::streamsize”，可能丢失数据
+i:\c++old\c++所学\vs2005\爱心1\爱心1\1.cpp(51): warning C4244: “参数”: 从“float”转换到“std::streamsize”，可能丢失数据
+i:\c++old\c++所学\vs2005\爱心1\爱心1\1.cpp(58): warning C4244: “参数”: 从“float”转换到“std::streamsize”，可能丢失数据
+i:\c++old\c++所学\vs2005\爱心1\爱心1\1.cpp(29): warning C4101: “w”: 未引用的局部变量
+i:\c++old\c++所学\vs2005\爱心1\爱心1\1.cpp(31): warning C4700: 使用了未初始化的局部变量“ch”
+1.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+  爱心1.vcxproj -> I:\C++Old\c++所学\vs2005\爱心1\Debug\爱心1.exe

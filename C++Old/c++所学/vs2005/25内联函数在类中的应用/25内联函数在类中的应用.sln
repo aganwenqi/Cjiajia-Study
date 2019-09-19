@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "25内联函数在类中的应用", "25内联函数在类中的应用\25内联函数在类中的应用.vcproj", "{D84331F0-1E70-49F0-9F06-617C27ABA323}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D84331F0-1E70-49F0-9F06-617C27ABA323}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D84331F0-1E70-49F0-9F06-617C27ABA323}.Debug|Win32.Build.0 = Debug|Win32
+		{D84331F0-1E70-49F0-9F06-617C27ABA323}.Release|Win32.ActiveCfg = Release|Win32
+		{D84331F0-1E70-49F0-9F06-617C27ABA323}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

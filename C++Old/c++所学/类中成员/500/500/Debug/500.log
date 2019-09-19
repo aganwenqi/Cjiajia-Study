@@ -1,0 +1,4 @@
+﻿  10.cpp
+i:\c++old\c++所学\类中成员\500\500\10.cpp(60): warning C4267: “=”: 从“size_t”转换到“unsigned short”，可能丢失数据
+10.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+  500.vcxproj -> I:\C++Old\c++所学\类中成员\500\Debug\500.exe

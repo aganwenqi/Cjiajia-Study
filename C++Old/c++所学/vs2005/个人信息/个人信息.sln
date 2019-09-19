@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "个人信息", "个人信息\个人信息.vcxproj", "{E06707E5-4D26-4A12-B585-8042E925C000}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E06707E5-4D26-4A12-B585-8042E925C000}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E06707E5-4D26-4A12-B585-8042E925C000}.Debug|Win32.Build.0 = Debug|Win32
+		{E06707E5-4D26-4A12-B585-8042E925C000}.Release|Win32.ActiveCfg = Release|Win32
+		{E06707E5-4D26-4A12-B585-8042E925C000}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF2E15FA-7708-46B5-8823-1ED16FA957EA}
+	EndGlobalSection
+EndGlobal

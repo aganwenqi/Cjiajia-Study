@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+int main()
+{   char x;
+	int *p=new int;
+	*p=10;
+	cout<<"刚创的指针的地址："<<p<<"  "<<"值："<<*p<<endl;
+	delete p;
+	cout<<"删除指针数据后的地址："<<p<<"  "<<"值："<<*p<<endl;
+	long *p1=new long;
+	*p1=100;
+	cout<<"新指针的地址："<<p1<<endl;
+	cout<<"第一个指针的地址："<<p<<endl;
+	*p=22;
+	cout<<"其中一个指针数据变更后p指针的值："<<*p<<endl;
+	cout<<"其中一个指针数据变更后p1指针的值："<<*p1<<endl;
+	cout<<"为什么地址没变，当然值也会一样，因为删除只是指针数值\n";
+	cout<<"而空间没有删除，所有下个指针系统会默认该空间内存\n";
+	cout<<"请输入一个字符修改错误：";
+	cin>>x;
+	delete p1;
+	p1=0;
+	p=0;
+    float *p2=new float;
+	*p2=10;
+	cout<<"刚创的指针的地址："<<p2<<"  "<<"值："<<*p2<<endl;
+	delete p2;
+	cout<<"删除指针数据后的地址："<<p2<<"  "<<"值："<<*p2<<endl;
+	p2=0;
+	short *p3=new short;
+	*p3=1;
+	cout<<"新指针的地址："<<p3<<endl;
+    p2=new float;
+	*p2=2;
+		cout<<"第一个指针的地址："<<p2<<endl;
+		cout<<"其中一个指针数据变更后p指针的值："<<*p2<<endl;
+	cout<<"其中一个指针数据变更后p1指针的值："<<*p3<<endl;
+		delete p3;
+	p3=0;
+	delete p2;
+	p2=0;
+	return 0;
+}

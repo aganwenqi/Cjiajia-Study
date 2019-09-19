@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "67私有子类", "67私有子类\67私有子类.vcproj", "{F032D52F-EE88-43B0-B809-C26B91A10F0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F032D52F-EE88-43B0-B809-C26B91A10F0B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F032D52F-EE88-43B0-B809-C26B91A10F0B}.Debug|Win32.Build.0 = Debug|Win32
+		{F032D52F-EE88-43B0-B809-C26B91A10F0B}.Release|Win32.ActiveCfg = Release|Win32
+		{F032D52F-EE88-43B0-B809-C26B91A10F0B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

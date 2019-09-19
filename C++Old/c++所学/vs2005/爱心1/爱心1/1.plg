@@ -1,0 +1,47 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 1 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\INOKNO~1\AppData\Local\Temp\RSP5E3D.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/1.pdb" /debug /machine:I386 /out:"Debug/1.exe" /pdbtype:sept 
+".\Debug\1.obj"
+]
+Creating command line "link.exe @C:\Users\INOKNO~1\AppData\Local\Temp\RSP5E3D.tmp"
+<h3>Output Window</h3>
+Linking...
+1.obj : warning LNK4044: unrecognized option "manifestdependency:type='win32' name='Microsoft.VC80.DebugCRT' version='8.0.50608.0' processorArchitecture='x86' publicKeyToken='1fc8b3b9a1e18e3b'"; ignored
+1.obj : warning LNK4044: unrecognized option "manifestdependency:type='win32' name='Microsoft.VC80.DebugCRT' version='8.0.50608.0' processorArchitecture='x86' publicKeyToken='1fc8b3b9a1e18e3b'"; ignored
+1.obj : warning LNK4044: unrecognized option "alternatename:__imp_??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z=__imp_??5std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z"; ignored
+1.obj : warning LNK4044: unrecognized option "alternatename:__imp_??$?5DU?$char_traits@D@std@@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAD@Z=__imp_??5std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAD@Z"; ignored
+1.obj : warning LNK4044: unrecognized option "alternatename:__imp_??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z=__imp_??6std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z"; ignored
+1.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<char,struct std::char_traits<char>,class std::allocator<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (__imp_??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z)
+1.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) class std::basic_istream<char,struct std::char_traits<char> > & __cdecl std::operator>><char,struct std::char_traits<char>,class std::allocator<char> >(class std::basic_istream<char,struct std::char_traits<char> > &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &)" (__imp_??$?5DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z)
+1.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) class std::basic_istream<char,struct std::char_traits<char> > & __cdecl std::operator>><char,struct std::char_traits<char> >(class std::basic_istream<char,struct std::char_traits<char> > &,char &)" (__imp_??$?5DU?$char_traits@D@std@@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@AAD@Z)
+1.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >(struct std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::_Has_debug_it)" (__imp_??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@U_Has_debug_it@01@@Z)
+1.obj : error LNK2001: unresolved external symbol ___security_cookie
+1.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+1.obj : error LNK2001: unresolved external symbol @__security_check_cookie@4
+1.obj : error LNK2001: unresolved external symbol @_RTC_CheckStackVars@8
+1.obj : error LNK2001: unresolved external symbol __ftol2_sse
+1.obj : error LNK2001: unresolved external symbol __RTC_UninitUse
+1.obj : error LNK2001: unresolved external symbol __RTC_CheckEsp
+1.obj : error LNK2001: unresolved external symbol __RTC_Shutdown
+1.obj : error LNK2001: unresolved external symbol __RTC_InitBase
+1.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall std::basic_ostream<char,struct std::char_traits<char> >::_Osfx(void)" (__imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ)
+1.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Lock(void)" (__imp_?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEXXZ)
+1.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Unlock(void)" (__imp_?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEXXZ)
+Debug/1.exe : fatal error LNK1120: 16 unresolved externals
+Ö´ÐÐ link.exe Ê±³ö´í.
+
+
+
+<h3>Results</h3>
+1.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
